@@ -1,0 +1,81 @@
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #262e34;
+  max-width: 1920px;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+*{
+
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'anta';
+  font-size: 60px;
+  color: #89BCD9;
+}
+
+.scroller {
+  Width: 38px;
+  Height: 89px;
+  background: url("./assets/Images/Arrowdown.png");
+  transition: 0.35s;
+
+  &:hover {
+    cursor: pointer;
+    background: url("./assets/Images/ArrDwnHvr.png");
+  }
+}
+
+.self-logo {
+  display: flex;
+  flex-direction: column;
+  width: 66px;
+  height: 73px;
+  margin-top: 0px !important;
+  font-size: 16px;
+
+  >span {
+      font-family: 'anta';
+  }
+
+  >p {
+      font-family: 'josefin sans';
+      margin: 0px;
+      color: #89BCD9;
+  }
+
+  >sub {
+      font-family: 'josefin sans';
+      color: #262E34;
+  }
+}
+
+
+/* anta-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Anta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/Fonts/anta-v1-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* josefin-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/Fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

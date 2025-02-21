@@ -1,0 +1,216 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 778px;
+    margin-top: 56px;
+    gap: 48px;
+
+    >span {
+        font-family: 'Anta';
+        font-size: 54px;
+        color: #89BCD9;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    margin: 0px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'josefin sans';
+    font-size: 16px;
+    width: 429px;
+
+    >span {
+        font-size: 38px;
+    }
+
+    >em {
+        color: #89BCD9;
+        font-size: 28px;
+    }
+
+    >p {
+        color: #ffffff;
+        font-size: 18px;
+    }
+}
+
+.cntct-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "josefin sans";
+    font-size: 20px;
+    gap: 22px;
+    padding: 32px 0px;
+
+    >div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+
+        &:hover {
+            cursor: pointer;
+            color: #89BCD9;
+            transition: 0.35s;
+        }
+    }
+
+    :nth-child(1) {
+
+        &:hover {
+            img {
+                content: url("../../assets/Images/iconEmailHvr.png");
+            }
+
+        }
+    }
+
+    :nth-child(2) {
+
+        &:hover {
+            img {
+                content: url("../../assets/Images/iconPhoneHvr.png");
+            }
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    Width: 910px;
+    Height: 356px;
+    Gap: 21px;
+    font-family: 'josefin sans';
+    font-size: 14px;
+
+    :nth-child(2) {
+        color: #89BCD9;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        >p {
+            padding-left: 1.5em;
+        }
+
+        >textarea {
+            height: 146px;
+            width: 95%;
+            border-radius: 30px;
+            padding: 20px;
+            background-color: transparent;
+            border: 1px solid #89BCD9;
+            color: #ffffff;
+            font-family: "josefin sans";
+            font-size: 18px;
+            resize: none;
+        }
+    }
+
+    >:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+}
+
+.cntct-inp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    color: #89BCD9;
+
+    >div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        >p {
+            padding-left: 1.5em;
+        }
+
+        >input {
+            height: 60px;
+            width: 90%;
+            border-radius: 30px;
+            padding: 0px 16px;
+            background-color: transparent;
+            border: 1px solid #89BCD9;
+            color: #ffffff;
+            font-family: 'josefin sans';
+            font-size: 18px;
+        }
+    }
+}
+
+.chk-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    color: #F8F5EC;
+
+    >input {
+        // opacity: 0;
+        display: none;
+
+        &:checked+label {
+            content: url("../../assets/Images/checked.png");
+        }
+    }
+
+    >label {
+        margin-right: 0.4em;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+
+        &:hover {
+            content: url("../../assets/Images/checkHover.png");
+            transition: 0.35s;
+        }
+    }
+
+    >a {
+        margin: 0.3em;
+        text-decoration: none;
+        color: #89BCD9;
+    }
+}
+
+.alternate {
+    position: absolute;
+    transform: scale(-1, -1);
+    right: 132px;
+}
+
+button {
+    background: url("../../assets/Images/sendBtn.png");
+    background-repeat: no-repeat;
+    width: 115px !important;
+    height: 53px;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background: url("../../assets/Images/sendBtnClicked.png");
+        background-repeat: no-repeat;
+        transition: 0.35s;
+    }
+}

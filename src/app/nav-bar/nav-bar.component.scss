@@ -1,0 +1,45 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    height: 104px;
+    gap: 11em;
+    background-color: #89BCD9;
+    width: 100%;
+    scroll-behavior: smooth;
+
+    >a {
+        font-family: 'josefin sans';
+        color: #262E34;
+        text-decoration: none;
+        font-size: 26px;
+
+        &:hover {
+            cursor: pointer;
+            color: #ffffff;
+            transition: 0.35s;
+        }
+    }
+}
+
+.lang-box {
+    display: flex;
+    margin: 0;
+
+    >a {
+        font-family: 'josefin sans';
+        color: #262E34;
+        text-decoration: none;
+        font-size: 18px;
+        margin-left: 14px;
+
+        &:hover {
+            cursor: pointer;
+            color: #ffffff;
+            transition: 0.35s;
+        }
+    }
+
+}

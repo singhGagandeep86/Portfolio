@@ -1,0 +1,61 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.short-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.lft-prt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    >div {
+        display: flex;
+        flex-direction: row;
+        margin-right: 52px;
+        font-family: 'Josefin Sans';
+        font-Size: 30px;
+
+        >span {
+            color: #89BCD9;
+            margin-right: 0.35em;
+            margin-left: 1em;
+        }
+    }
+
+    >:nth-child(1) {
+        >img {
+            width: 84px;
+            height: 84px;
+        }
+    }
+}
+
+.rght-prt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 379px;
+    height: 250px;
+    font-family: 'josefin sans';
+    font-size: 18px;
+}
+
+.talk-btn{
+    width: 134px;
+    height: 48px;
+    background: url("../../assets/Images/buttonTalk.png");
+    &:hover{
+        cursor: pointer;
+        background: url("../../assets/Images/btnTlkHvr.png");
+        transition: 0.35s;
+    }
+}

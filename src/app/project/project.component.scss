@@ -1,0 +1,136 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 98px;
+    font-family: 'josefin sans';
+    font-size: 30px;
+    gap: 4em;
+    padding: 0em 3.5em;
+    >a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #89BCD9;
+        height: 100%;
+        width: 254px;
+
+        &:hover {
+            background-color: #89BCD912;
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
+            color: #ffffff;
+        }
+
+    }
+}
+
+.project-detail {
+    background-color: #89BCD912;
+    display: flex;
+    flex-direction: row;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #F8F5EC;
+    width: 55%;
+    padding: 2em 4em 2em 8em;
+
+    >h3 {
+        font-family: 'josefin sans';
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+
+        >p {
+            font-family: 'josefin sans';
+            font-size: 18px;
+        }
+
+    }
+
+    >p {
+        font-family: 'josefin sans';
+        font-size: 18px;
+    }
+}
+
+.project-optics {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 0em 8em 0em 3em;
+
+    :nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        font-family: 'josefin sans';
+        font-size: 18px;
+
+        >div {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+            >img {
+                height: 4em;
+            }
+        }
+    }
+
+    >img {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    :nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        >a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 30px;
+            width: 120px;
+            height: 48px;
+            font-family: 'Josefin Sans';
+            font-size: 18px;
+        }
+
+        :nth-child(1) {
+            background-color: #89BCD9;
+            color: #0A383F;
+
+            &:hover {
+                background-color: #F8F5EC;
+            }
+        }
+
+        :nth-child(2) {
+            background-color: none;
+            border: 1px solid #89BCD9;
+            color: #89BCD9;
+
+            &:hover {
+                background-color: #F8F5EC1F;
+
+            }
+        }
+    }
+}
