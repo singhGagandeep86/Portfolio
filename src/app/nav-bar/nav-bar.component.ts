@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-nav-bar',
@@ -19,6 +20,7 @@ export class NavBarComponent {
 
   tabClicked(event: Event) {
     const clickedElement = event.target as HTMLElement;
+    this.scroller.scrollToAnchor(clickedElement.id);
 
     if (clickedElement.id == 'aboutMe') {
       this.aboutMeStatus = true;
@@ -49,5 +51,7 @@ export class NavBarComponent {
     }
 
   }
+
+constructor (private scroller: ViewportScroller){}
 
 }
