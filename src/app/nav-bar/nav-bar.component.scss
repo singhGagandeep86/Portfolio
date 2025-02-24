@@ -11,15 +11,14 @@
     scroll-behavior: smooth;
 
     >a {
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-family: 'josefin sans';
         color: #262E34;
         text-decoration: none;
         font-size: 26px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         &:hover {
             cursor: pointer;
@@ -45,7 +44,7 @@
         color: #262E34;
         text-decoration: none;
         font-size: 18px;
-        margin-left: 14px;
+        padding: 0.4em;
 
         &:hover {
             cursor: pointer;
@@ -54,4 +53,11 @@
         }
     }
 
+}
+
+.lang-selected{
+    background: url("../../assets/Images/EllipseSmallSec.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff !important;
 }

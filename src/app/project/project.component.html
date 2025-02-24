@@ -5,7 +5,9 @@
         <div class="project-nav">
 
             @for (project of projects; track $index) {
-            <div (click)="selectProject($index)">{{ $index + 1}}. {{ project.name}}</div>
+            <div (click)="selectProject($index, $event)" [ngClass]="clicked[$index] ? 'clicked' : ''">{{ $index + 1}}.
+                {{ project.name}}
+            </div>
             }
         </div>
         <div class="project-detail">
@@ -28,19 +30,16 @@
                     <span>Technologies</span>
                     <div>
                         @for (img of projectTechnologies; track projectImage) {
-                            <img src="./assets/Images/{{ img }}.png">
+                        <img src="./assets/Images/{{ img }}.png">
                         }
-                        <!-- <img src="./assets/Images/HTML.png">
-                        <img src="./assets/Images/JavaScript.png">
-                        <img src="./assets/Images/CSS.png"> -->
                     </div>
                 </div>
 
-                <img src="{{ projectImage }}">
+                <img class="animate-opacity" src="{{ projectImage }}">
 
                 <div>
-                    <a href="">Live Test</a>
-                    <a href="">GitHub</a>
+                    <a href="{{projectLink}}" target="_blank">Live Test</a>
+                    <a href="{{projectGithub}}" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>

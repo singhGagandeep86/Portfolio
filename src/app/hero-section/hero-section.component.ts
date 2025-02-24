@@ -11,21 +11,12 @@ import { AboutMeComponent } from '../about-me/about-me.component';
 })
 
 export class HeroSectionComponent {
-
-  // @Input() aboutMe: AboutMeComponent | undefined;
-
   scrollDown() {
 
     window.scrollTo({ top: 896, behavior: 'smooth' });
-    // const aboutMeElement = this.aboutMe.elementRef.nativeElement;
-    // window.scrollTo({top: aboutMeElement.offsetTop, behavior: 'smooth'});
   }
 
+  emailString = "mailto: tech@gagandeepsingh.de"
 
-
-
-  // constructor(public scroller: ViewportScroller, public elementRef: ElementRef) {
-
-  // }
 
 }

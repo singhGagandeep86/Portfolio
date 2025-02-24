@@ -16,7 +16,9 @@ export class NavBarComponent {
   aboutMeStatus: boolean = false;
   mySkillsStatus: boolean = false
   projectsStatus: boolean = false;
-  contactStatus: boolean = false
+  contactStatus: boolean = false;
+  germanLangSelected: boolean = false;
+  englishLangSelected: boolean = true;
 
   tabClicked(event: Event) {
     const clickedElement = event.target as HTMLElement;
@@ -48,6 +50,16 @@ export class NavBarComponent {
       this.mySkillsStatus = false;
       this.projectsStatus = false;
       this.contactStatus = true;
+    }
+
+    if (clickedElement.id == 'german') {
+      this.germanLangSelected = true;
+      this.englishLangSelected = false;
+    }
+
+    if (clickedElement.id == 'english') {
+      this.germanLangSelected = false;
+      this.englishLangSelected = true;
     }
 
   }

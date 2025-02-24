@@ -18,4 +18,8 @@ import { NavBarComponent } from "./nav-bar/nav-bar.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
+  emailString = "mailto: tech@gagandeepsingh.de"
+
+
 }
