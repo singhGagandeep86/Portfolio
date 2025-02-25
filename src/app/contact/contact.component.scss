@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 778px;
     margin-top: 56px;
     gap: 48px;
 
@@ -89,45 +88,14 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    Width: 910px;
-    Height: 356px;
-    Gap: 21px;
+    width: 910px;
+    gap: 8px;
     font-family: 'josefin sans';
     font-size: 14px;
-
-    :nth-child(2) {
-        color: #89BCD9;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        >p {
-            padding-left: 1.5em;
-        }
-
-        >textarea {
-            height: 146px;
-            width: 95%;
-            border-radius: 30px;
-            padding: 20px;
-            background-color: transparent;
-            border: 1px solid #89BCD9;
-            color: #ffffff;
-            font-family: "josefin sans";
-            font-size: 18px;
-            resize: none;
-        }
-    }
-
-    >:nth-child(3) {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-
 }
 
-.cntct-inp {
+
+.input-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -139,58 +107,89 @@ form {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.8em;
 
         >p {
             padding-left: 1.5em;
+            margin: 0;
         }
 
         >input {
-            height: 60px;
-            width: 90%;
-            border-radius: 30px;
-            padding: 0px 16px;
-            background-color: transparent;
+            width: 82%;
+            padding: 1.2em 2em;
             border: 1px solid #89BCD9;
+            background: #89BCD91F;
             color: #ffffff;
-            font-family: 'josefin sans';
+            border-radius: 30px;
             font-size: 18px;
         }
     }
 }
+
+.message-container {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 0.8em;
+    color: #89BCD9;
+
+    :nth-child(2) {
+        height: 60px;
+        width: 95%;
+        height: 8em;
+        border-radius: 30px;
+        padding: 20px 18px;
+        background-color: transparent;
+        border: 1px solid #89BCD9;
+        color: #ffffff;
+        font-family: 'josefin sans';
+        font-size: 18px;
+        resize: none;
+    }
+}
+
+
 
 .chk-btn {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
-    color: #F8F5EC;
 
-    >input {
-        // opacity: 0;
-        display: none;
-
-        &:checked+label {
-            content: url("../../assets/Images/checked.png");
-        }
-    }
-
-    >label {
-        margin-right: 0.4em;
-        cursor: pointer;
+    >div {
         display: flex;
         flex-direction: row;
-        width: fit-content;
+        align-items: center;
+        color: #F8F5EC;
 
-        &:hover {
-            content: url("../../assets/Images/checkHover.png");
-            transition: 0.35s;
+        >input {
+            display: none;
+
+            &:checked+label {
+                content: url("../../assets/Images/checked.png");
+            }
         }
-    }
 
-    >a {
-        margin: 0.3em;
-        text-decoration: none;
-        color: #89BCD9;
+        >label {
+            margin-right: 0.4em;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+
+            &:hover {
+                content: url("../../assets/Images/checkHover.png");
+                transition: 0.35s;
+            }
+        }
+
+        >a {
+            margin: 0.3em;
+            text-decoration: none;
+            color: #89BCD9;
+        }
     }
 }
 
@@ -206,6 +205,7 @@ button {
     width: 115px !important;
     height: 53px;
     border: none;
+    margin-left: 90%;
 
     &:hover {
         cursor: pointer;

@@ -15,6 +15,7 @@ div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 1em;
 
     >div {
         display: flex;
@@ -30,10 +31,10 @@ div {
         }
     }
 
-    >:nth-child(1) {
+    >:nth-child(3) {
         >img {
-            width: 84px;
-            height: 84px;
+            width: 74px;
+            height: 62px;
         }
     }
 }
@@ -47,13 +48,29 @@ div {
     height: 250px;
     font-family: 'josefin sans';
     font-size: 18px;
+    animation: typing 2s steps(22);
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
 }
 
-.talk-btn{
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    // to{
+    //     width: 50%;
+    // }
+}
+
+
+
+.talk-btn {
     width: 134px;
     height: 48px;
     background: url("../../assets/Images/buttonTalk.png");
-    &:hover{
+
+    &:hover {
         cursor: pointer;
         background: url("../../assets/Images/btnTlkHvr.png");
         transition: 0.35s;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,7 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 
 
+
 export class ProjectComponent {
+
+  
+  
 
   projects = [
     {
@@ -68,11 +72,21 @@ export class ProjectComponent {
   projectTechnologies: string | string[] = this.projects[0].technologies;
   projectLink: string = this.projects[0].link;
   projectGithub: string = this.projects[0].github;
+  index:number = 0;
 
+  @ViewChild('projScreen') myProj?: ElementRef;
+  @ViewChild('techIcons') techIcons?: ElementRef;
+  @ViewChild('techTitle') techTitle?: ElementRef;
+  @ViewChild('projectLinks') projectLinks?: ElementRef;
 
   selectProject(index: number, event: Event) {
 
     this.addClasstoTab(index);
+
+    this.myProj?.nativeElement.classList.add('animate-proj-img');
+    this.techIcons?.nativeElement.classList.add('animate-tech-img');
+    this.techTitle?.nativeElement.classList.add('animate-tech-title');
+    this.projectLinks?.nativeElement.classList.add('animate-link-tabs');
 
     this.projectDuration = this.projects[index].duration;
     this.projectDescription = this.projects[index].description;
@@ -83,6 +97,14 @@ export class ProjectComponent {
     this.projectTechnologies = this.projects[index].technologies;
     this.projectLink = this.projects[index].link;
     this.projectGithub = this.projects[index].github;
+    this.index = index;
+
+    setTimeout( () => {
+      this.myProj?.nativeElement.classList.remove('animate-proj-img');
+      this.techIcons?.nativeElement.classList.remove('animate-tech-img');
+      this.techTitle?.nativeElement.classList.remove('animate-tech-title');
+      this.projectLinks?.nativeElement.classList.remove('animate-link-tabs');
+    }, 1000);
 
   }
 
@@ -93,6 +115,7 @@ export class ProjectComponent {
 
       case 0:
         this.clicked[0] = true;
+
         break;
 
       case 1:

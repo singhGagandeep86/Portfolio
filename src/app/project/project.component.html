@@ -27,17 +27,17 @@
             </div>
             <div class="project-optics">
                 <div>
-                    <span>Technologies</span>
-                    <div>
+                    <span #techTitle>Technologies</span>
+                    <div #techIcons>
                         @for (img of projectTechnologies; track projectImage) {
                         <img src="./assets/Images/{{ img }}.png">
                         }
                     </div>
                 </div>
 
-                <img class="animate-opacity" src="{{ projectImage }}">
+                <img #projScreen src="{{ projectImage }}">
 
-                <div>
+                <div #projectLinks>
                     <a href="{{projectLink}}" target="_blank">Live Test</a>
                     <a href="{{projectGithub}}" target="_blank">GitHub</a>
                 </div>
