@@ -13,33 +13,33 @@
         <div class="project-detail">
             <div class="description">
                 <h3><img src="./assets/Images/EllipseSmall.png"> About the Project
-                    @if ( projectDuration) {
-                    <p> Duration: {{ projectDuration }}</p>
+                    @if ( projects.projectDuration) {
+                    <p> Duration: {{ projects.projectDuration }}</p>
                     }
                 </h3>
-                <p>{{ projectDescription }} </p>
-                @if (projectLearnProcess) {
+                <p>{{ projects.projectDescription }} </p>
+                @if (projects.projectLearnProcess) {
                 <h3><img src="./assets/Images/EllipseSmall.png">How I have organised my work process</h3>
-                <p> {{ projectLearnProcess}} </p>
-                <h3><img src="./assets/Images/EllipseSmall.png">{{ projectHeading }}</h3>
-                <p> {{ projectDetails }}</p>
+                <p> {{ projects.projectLearnProcess}} </p>
+                <h3><img src="./assets/Images/EllipseSmall.png">{{ projects.projectHeading }}</h3>
+                <p> {{ projects.projectDetails }}</p>
                 }
             </div>
             <div class="project-optics">
                 <div>
                     <span #techTitle>Technologies</span>
                     <div #techIcons>
-                        @for (img of projectTechnologies; track projectImage) {
+                        @for (img of projects.projectTechnologies; track projects.projectImage) {
                         <img src="./assets/Images/{{ img }}.png">
                         }
                     </div>
                 </div>
 
-                <img id="projScreen" #projScreen src="{{ projectImage }}">
+                <img id="projScreen" #projScreen src="{{ projects.projectImage }}">
 
                 <div #projectLinks>
-                    <a href="{{projectLink}}" target="_blank">Live Test</a>
-                    <a href="{{projectGithub}}" target="_blank">GitHub</a>
+                    <a href="{{ projects.projectLink }}" target="_blank">Live Test</a>
+                    <a href="{{ projects.projectGithub }}" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
