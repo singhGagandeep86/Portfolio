@@ -22,6 +22,9 @@ export class NavBarComponent {
 
   tabClicked(event: Event) {
     const clickedElement = event.target as HTMLElement;
+
+    console.log(clickedElement.id);
+    
     this.scroller.scrollToAnchor(clickedElement.id);
 
     if (clickedElement.id == 'aboutMe') {
@@ -64,6 +67,6 @@ export class NavBarComponent {
 
   }
 
-constructor (private scroller: ViewportScroller){}
+  constructor(private scroller: ViewportScroller) { }
 
 }

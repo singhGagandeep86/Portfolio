@@ -49,7 +49,7 @@ div {
     font-family: 'josefin sans';
     font-size: 18px;
     animation: typing 2s steps(22);
-    white-space: nowrap;
+    white-space: pre-wrap;
     overflow: hidden;
     text-align: left;
 }
@@ -58,9 +58,9 @@ div {
     from {
         width: 0;
     }
-    // to{
-    //     width: 50%;
-    // }
+    to{
+        width: 100%;
+    }
 }
 
 

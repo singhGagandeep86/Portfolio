@@ -1,18 +1,20 @@
 import { Component, Inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, HttpClientModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
-  http = Inject( HttpClient)
+  // http = Inject(HttpClient);
+
+  constructor( private http: HttpClient){}
 
   contactData = {
     name: "",
@@ -25,10 +27,10 @@ export class ContactComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://gagandeepsingh.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -39,11 +41,12 @@ export class ContactComponent {
   };
 
   toSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.contactData.accepted == true) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
-          next: (response: string) => {
-
+          next: (response: object) => {
+            console.log(`test`, response);
+            
             ngForm.resetForm();
           },
           error: (error: string) => {
@@ -52,7 +55,8 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      console.log(this.contactData);
+      
       ngForm.resetForm();
     }
   }

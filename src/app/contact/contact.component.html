@@ -1,7 +1,8 @@
 <div class="main-container">
     <span>Contact me</span>
 
-    <div class="scroller alternate" (click)="scrollUp()"></div>
+    <!-- <div class="scroller alternate" (click)="scrollUp()"></div> -->
+     <a href="#hero" class="scroller alternate"></a>
 
     <div class="contacts">
         <div class="text">
@@ -48,10 +49,12 @@
 
         <div class="chk-btn">
             <div>
-                <input type="radio" [(ngModel)]="contactData.accepted" name="radio" id="radio" required>
-                <label for="radio"><img src="./assets/Images/check.png"></label>
+                <input #check type="checkbox" [(ngModel)]="contactData.accepted" name="check" id="check" required>
+                <label for="check"><img src="./assets/Images/check.png"></label>
                 I've read the <a href="">privacy policy</a> and agree to the processionof my data as outlined.
             </div>
+            <p [ngStyle]="{'opacity': !check.checked && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+                Please agree to privacy policy</p>
         </div>
         <button></button>
 
