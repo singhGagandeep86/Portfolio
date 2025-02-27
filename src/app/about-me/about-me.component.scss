@@ -25,6 +25,10 @@ div {
         font-family: 'Josefin Sans';
         font-Size: 30px;
 
+        >img{
+            opacity: 0;
+        }
+
         >P {
             overflow: hidden;
             white-space: pre;
@@ -83,6 +87,7 @@ div {
     width: 134px;
     height: 48px;
     background: url("../../assets/Images/buttonTalk.png");
+    opacity: 0;
 
     &:hover {
         cursor: pointer;

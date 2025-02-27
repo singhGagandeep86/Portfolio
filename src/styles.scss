@@ -65,6 +65,39 @@ h1 {
   }
 }
 
+.apear-from-left{
+  animation: from-left 0.4s ease-in forwards;
+}
+
+
+@keyframes from-left {
+  0% {
+      opacity: 0;
+      transform: translateX(-600%);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.apear-from-right {
+  animation: from-right 0.9s ease-in forwards;
+}
+
+@keyframes from-right {
+  0% {
+      opacity: 0;
+      transform: translateX(300px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
 
 /* anta-regular - latin */
 @font-face {

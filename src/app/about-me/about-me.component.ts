@@ -13,11 +13,19 @@ export class AboutMeComponent {
   @ViewChild('ptag') pTag?: ElementRef;
   @ViewChild('ptag2') pTag2?: ElementRef;
   @ViewChild('ptag3') pTag3?: ElementRef;
+  @ViewChild('talkButton') talkButton?: ElementRef;
+
+  locationImage: HTMLImageElement | null = null;
+  remoteImage: HTMLImageElement | null = null;
+  challengeImage: HTMLImageElement | null = null;
 
   ngAfterViewInit(): void {
+
     this.observer = new IntersectionObserver((enteries) => {
       enteries.forEach((entry) => {
         if (entry.isIntersecting) {
+          console.log(this.talkButton);
+          
           this.addAnimations();
         } else {
           this.removeAnimations();
@@ -32,20 +40,40 @@ export class AboutMeComponent {
 
 
   addAnimations() {
-    this.pTag?.nativeElement.classList.add('animation');
+
+    this.pTag?.nativeElement.parentElement.firstChild.classList.add('apear-from-left');
+    setTimeout(() => {
+      this.pTag?.nativeElement.classList.add('animation');
+    }, 400);
+    setTimeout(() => {
+      this.pTag2?.nativeElement.parentElement.firstChild.classList.add('apear-from-left');
+    }, 2000);
     setTimeout(() => {
       this.pTag2?.nativeElement.classList.add('animation');
-    }, 1600);
+    }, 2600);
+    setTimeout(() => {
+      this.pTag3?.nativeElement.parentElement.firstChild.classList.add('apear-from-left');
+    }, 3800);
+
     setTimeout(() => {
       this.pTag3?.nativeElement.classList.add('animation');
-    }, 3400);
+    }, 4200);
+
+    setTimeout(() => {
+      this.talkButton?.nativeElement.classList.add('apear-from-right');
+    }, 5000);
+
   }
 
 
   removeAnimations() {
+    this.pTag?.nativeElement.parentElement.firstChild.classList.remove('apear-from-left');
+    this.pTag2?.nativeElement.parentElement.firstChild.classList.remove('apear-from-left');
+    this.pTag3?.nativeElement.parentElement.firstChild.classList.remove('apear-from-left');
     this.pTag?.nativeElement.classList.remove('animation');
     this.pTag2?.nativeElement.classList.remove('animation');
     this.pTag3?.nativeElement.classList.remove('animation');
+    this.talkButton?.nativeElement.classList.remove('apear-from-right');
   }
 
 
