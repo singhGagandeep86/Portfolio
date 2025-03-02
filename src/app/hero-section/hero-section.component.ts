@@ -16,6 +16,10 @@ export class HeroSectionComponent {
     window.scrollTo({ top: 896, behavior: 'smooth' });
   }
 
+  scrollToTop(){
+    window.scrollTo({ top:0, behavior: 'smooth'});
+  }
+
   emailString = "mailto: tech@gagandeepsingh.de"
 
 

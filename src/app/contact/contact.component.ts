@@ -12,8 +12,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class ContactComponent {
 
-  // http = Inject(HttpClient);
-
   constructor( private http: HttpClient){}
 
   contactData = {
@@ -28,6 +26,7 @@ export class ContactComponent {
   }
 
   mailTest = false;
+  policyRead = false;
 
   post = {
     endPoint: 'https://gagandeepsingh.de/sendMail.php',

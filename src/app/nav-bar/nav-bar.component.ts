@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewportScroller } from '@angular/common';
+import { WindowService } from '../window.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -20,12 +21,13 @@ export class NavBarComponent {
   germanLangSelected: boolean = false;
   englishLangSelected: boolean = true;
 
+  @ViewChild('projectSection') projectSection?: ElementRef;
+
   tabClicked(event: Event) {
     const clickedElement = event.target as HTMLElement;
 
-    console.log(clickedElement.id);
-    
-    this.scroller.scrollToAnchor(clickedElement.id);
+    this.windowService.scrollToHeroSection();
+
 
     if (clickedElement.id == 'aboutMe') {
       this.aboutMeStatus = true;
@@ -67,6 +69,6 @@ export class NavBarComponent {
 
   }
 
-  constructor(private scroller: ViewportScroller) { }
+  constructor(private scroller: ViewportScroller, public windowService: WindowService ) { }
 
 }

@@ -173,19 +173,14 @@ form {
         }
 
         >label {
-            margin-right: 0.4em;
+            margin-right: 0.3em;
             cursor: pointer;
             display: flex;
             flex-direction: row;
-            width: fit-content;
-            width: 22px;
-            height: 20px;
 
             &:hover {
                 content: url("../../assets/Images/checkHover.png");
-                width: 25px;
-                height: 25px;
-                transition: 0.35s;
+                transition: 0.35s ease;
             }
         }
 
@@ -193,6 +188,11 @@ form {
             margin-right: 0.4em;
             text-decoration: none;
             color: #89BCD9;
+        }
+
+        >span {
+            color: rgb(255, 0, 0);
+            margin-left: 0.8em;
         }
     }
 }

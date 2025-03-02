@@ -24,8 +24,6 @@ export class AboutMeComponent {
     this.observer = new IntersectionObserver((enteries) => {
       enteries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(this.talkButton);
-          
           this.addAnimations();
         } else {
           this.removeAnimations();

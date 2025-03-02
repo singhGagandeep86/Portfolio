@@ -14,5 +14,9 @@ export class AppComponent {
 
   emailString = "mailto: tech@gagandeepsingh.de"
 
+ 
+ 
+ 
 
+ 
 }

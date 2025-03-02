@@ -2,7 +2,7 @@
     <span>Contact me</span>
 
     <!-- <div class="scroller alternate" (click)="scrollUp()"></div> -->
-     <a href="#hero" class="scroller alternate"></a>
+    <a href="#hero" class="scroller alternate"></a>
 
     <div class="contacts">
         <div class="text">
@@ -49,9 +49,13 @@
 
         <div class="chk-btn">
             <div>
-                <input #check type="checkbox" [(ngModel)]="contactData.accepted" name="check" id="check" required>
+                <input #check type="checkbox" (click)="policyRead && contactData.accepted = !contactData.accepted"
+                    name="check" id="check" required>
                 <label for="check"><img src="./assets/Images/check.png"></label>
-                I've read the <a target="_blank" href="privacy">privacy policy</a> and agree to the processionof my data as outlined.
+                I've read the <a target="_blank" href="privacy" (click)="policyRead = true"> privacy policy</a> and
+                agree to the processionof my data as outlined.
+                <span [ngStyle]="{'opacity': !policyRead && check.checked ? 1 : 0}"> Please read privacy Policy first
+                </span>
             </div>
             <p [ngStyle]="{'opacity': !check.checked && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                 Please agree to privacy policy</p>
