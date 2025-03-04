@@ -5,6 +5,7 @@ div {
     justify-content: center;
     margin-top: 56px;
     gap: 56px;
+
     >span {
         font-family: 'josefin sans';
         font-size: 32px;
@@ -16,13 +17,51 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
+    gap: 6em;
     margin: 0px;
+    font-family: 'josefin sans';
+    color: #F8F5EC;
+
 
     >div {
         Width: 378px;
         Height: 383px;
         margin: 0px;
-        background: url("../../assets/Images/referanceShape.png");
+        gap: 0px;
+        font-size: 18px;
+        gap: 1.2em;
+
+        >img {
+            position: absolute;
+            content: url("../../assets/Images/referanceShape.png");
+            margin-left: 2.6em;
+            transition: 1.65s ease;
+
+            &:hover {
+                content: url("../../assets/Images/referanceShapeHover.png");
+            }
+
+        }
+
+        >h4 {
+            margin: 0px;
+            font-size: 26px;
+        }
+
+        >p {
+            margin: 0px;
+            word-wrap: break-word;
+            width: 18em;
+            text-align: center;
+
+            >span {
+                color: #89BCD9;
+                margin: 0em 0.4em;
+            }
+
+            >b{
+                color: #89BCD9;
+            }
+        }
     }
 }
