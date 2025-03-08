@@ -4,14 +4,15 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  background-color: #262e34;
-  max-width: 1920px;
+  background-color: #000000;
+  max-width: 1440px;
   color: #ffffff;
   scroll-behavior: smooth;
 }
 
 app-root {
   width: 100%;
+  background-color: #262e34;
 }
 
 * {
@@ -37,8 +38,8 @@ h1 {
 }
 
 .self-logo {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   width: 66px;
   height: 73px;
   margin-top: 0px !important;
