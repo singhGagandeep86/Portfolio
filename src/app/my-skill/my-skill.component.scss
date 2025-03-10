@@ -2,12 +2,15 @@ div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .skill-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
+    min-height: 24.75em;
     gap: 79px;
 }
 
@@ -23,6 +26,7 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: auto;
     text-align: center;
     font-family: 'josefin sans';
     font-size: 18px;
@@ -49,7 +53,6 @@ div {
                 }
             }
 
-            /* Safari, Chrome and Opera > 12.1 */
             @-webkit-keyframes fadeIn {
                 from {
                     opacity: 0;
@@ -71,6 +74,54 @@ div {
     >div {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 960px) {
+    .skill-icons {
+        gap: 2em;
+
+        >img {
+            width: 3em;
+        }
+    }
+
+    .upgrading {
+        font-size: 1rem;
+
+        >img {
+            width: 25em;
+
+            &:hover {
+                width: 20em;
+            }
+        }
+    }
+}
+
+@media (max-width: 910px) {
+
+    .skill-container {
+        gap: 3.85em;
+    }
+
+    .skill-icons {
+        gap: 1.75em;
+    }
+
+    .upgrading {
+        font-size: 0.92rem;
+
+        >img {
+            width: 23em;
+
+            &:hover {
+                width: 20em;
+            }
+        }
     }
 
 }

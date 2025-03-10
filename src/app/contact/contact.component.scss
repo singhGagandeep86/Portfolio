@@ -5,11 +5,21 @@
     margin-top: 56px;
     gap: 48px;
 
-    >span {
-        font-family: 'Anta';
-        font-size: 54px;
-        color: #89BCD9;
+    >div {
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        >span {
+            font-family: 'Anta';
+            font-size: 54px;
+            color: #89BCD9;
+            margin: 0em 4em;
+        }
     }
+
 }
 
 .contacts {
@@ -198,9 +208,7 @@ form {
 }
 
 .alternate {
-    position: absolute;
     transform: scale(-1, -1);
-    right: 24%;
 }
 
 button {

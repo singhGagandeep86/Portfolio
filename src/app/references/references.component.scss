@@ -3,12 +3,13 @@ div {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     margin-top: 56px;
     gap: 56px;
 
     >span {
         font-family: 'josefin sans';
-        font-size: 32px;
+        font-size: 2rem;
         color: #89BCD9;
     }
 }
@@ -17,6 +18,7 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
     gap: 6em;
     margin: 0px;
     font-family: 'josefin sans';
@@ -27,25 +29,26 @@ div {
         Width: 378px;
         Height: 383px;
         margin: 0px;
-        gap: 0px;
-        font-size: 18px;
+        font-size: 1.125rem;
         gap: 1.2em;
 
         >img {
             position: absolute;
             content: url("../../assets/Images/referanceShape.png");
             margin-left: 2.6em;
-            transition: 1.65s ease;
 
             &:hover {
                 content: url("../../assets/Images/referanceShapeHover.png");
+                height: 20em;
+                width: 20em;
+                margin: 0;
             }
 
         }
 
         >h4 {
             margin: 0px;
-            font-size: 26px;
+            font-size: 1.62rem;
         }
 
         >p {
@@ -59,9 +62,52 @@ div {
                 margin: 0em 0.4em;
             }
 
-            >b{
+            >b {
                 color: #89BCD9;
             }
         }
+    }
+}
+
+@media (max-width: 965px) {
+
+    div {
+        span {
+            font-size: 1.8rem;
+        }
+    }
+
+    .ref-container {
+        gap: 4.2em;
+
+        >div {
+            font-size: 1rem;
+
+            >img {
+                width: 24em;
+
+                &:hover {
+                    width: 22em;
+                    margin-left: 0em;
+                }
+            }
+
+            >h4 {
+                font-size: 1.42rem;
+            }
+
+            >p {
+                >span {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+
+    .ref-container {
+        gap: 2.8em;
     }
 }
