@@ -20,6 +20,18 @@
     margin-top: 3px;
 }
 
+.overlay{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 96%;
+
+    :nth-child(2){
+        cursor: pointer;
+    }
+}
+
 .pic-part {
     display: flex;
     align-items: center;
@@ -138,7 +150,7 @@
 
 @media (max-width: 1145px) {
 
-    .main-container{
+    .main-container {
         height: auto;
         margin: 10% 0%;
     }
@@ -148,8 +160,45 @@
             font-size: 3rem;
         }
 
-        >p{
+        >p {
             font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 865px) {
+
+    .head-part {
+        >span {
+            font-size: 2.6rem;
+        }
+
+        >p {
+            font-size: 1.6rem;
+        }
+    }
+
+}
+
+@media (max-width: 752px) {
+
+    .main-container {
+
+        >div {
+            flex-direction: column;
+        }
+    }
+
+    .overlay{
+       display: flex;
+    }
+
+    .head-part {
+
+        width: 100%;
+
+        >div {
+            display: none;
         }
     }
 }

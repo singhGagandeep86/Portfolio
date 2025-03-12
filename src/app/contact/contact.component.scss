@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 56px;
-    gap: 48px;
+    margin-top: 3.5em;
+    gap: 3em;
+    width: 100%;
 
     >div {
 
@@ -14,7 +15,7 @@
 
         >span {
             font-family: 'Anta';
-            font-size: 54px;
+            font-size: 3.375rem;
             color: #89BCD9;
             margin: 0em 4em;
         }
@@ -25,8 +26,8 @@
 .contacts {
     display: flex;
     flex-direction: row;
-    gap: 36px;
-    margin: 0px;
+    gap: 2.25em;
+    margin: 0em;
 }
 
 .text {
@@ -34,21 +35,20 @@
     flex-direction: column;
     align-items: flex-start;
     font-family: 'josefin sans';
-    font-size: 16px;
-    width: 429px;
+    width: 26.81em;
 
     >span {
-        font-size: 38px;
+        font-size: 2.375rem;
     }
 
     >em {
         color: #89BCD9;
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     >p {
         color: #ffffff;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 
@@ -57,15 +57,15 @@
     flex-direction: column;
     align-items: flex-start;
     font-family: "josefin sans";
-    font-size: 20px;
-    gap: 22px;
+    font-size: 1.25rem;
+    gap: 1.375em;
     padding: 32px 0px;
 
     >div {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 18px;
+        gap: 1.125em;
 
         &:hover {
             cursor: pointer;
@@ -98,22 +98,22 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 910px;
+    width: 56.875em;
     gap: 8px;
     font-family: 'josefin sans';
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 
 .input-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     color: #89BCD9;
 
     >div {
-        width: 50%;
+        width: 47.2%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -131,7 +131,7 @@ form {
             background: #89BCD91F;
             color: #ffffff;
             border-radius: 30px;
-            font-size: 18px;
+            font-size: 1.125rem;
         }
     }
 }
@@ -155,7 +155,7 @@ form {
         border: 1px solid #89BCD9;
         color: #ffffff;
         font-family: 'josefin sans';
-        font-size: 18px;
+        font-size: 1.125rem;
         resize: none;
     }
 }
@@ -225,5 +225,62 @@ button {
         background: url("../../assets/Images/sendBtnClicked.png");
         background-repeat: no-repeat;
         transition: 0.35s;
+    }
+}
+
+@media (max-width: 985px) {
+    .contacts {
+        gap: 0.85em;
+    }
+}
+
+@media (max-width: 965px) {
+
+    .text {
+        width: 22.62em;
+
+        >span {
+            font-size: 1.95rem;
+        }
+
+        >p {
+            font-size: 0.92rem;
+        }
+    }
+
+    .cntct-detail {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 752px) {
+
+    .main-container {
+
+        >div:nth-child(1) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 6em;
+        }
+
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .input-container {
+        width: 100%;
+        gap: 1em;
+    }
+
+    .chk-btn {
+        >div {
+            >span {
+                position: absolute;
+                left: 4%;
+                margin-top: 9%;
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ div {
     flex-direction: row;
     gap: 49px;
     flex-wrap: wrap;
-    width: 409px;
+    width: 25.56em;
 }
 
 .upgrading {
@@ -79,10 +79,19 @@ div {
 
 }
 
+@media (max-width: 1040px) {
+    .skill-icons {
+        gap: 2.9em;
+
+        >img {
+            width: 3.1em;
+        }
+    }
+}
 
 @media (max-width: 960px) {
     .skill-icons {
-        gap: 2em;
+        gap: 2.7em;
 
         >img {
             width: 3em;
@@ -102,14 +111,19 @@ div {
     }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 928px) {
+
+    .skill-icons {
+        gap: 2.5em;
+        width: 23.21em;
+
+        >img {
+            width: 2.8em;
+        }
+    }
 
     .skill-container {
         gap: 3.85em;
-    }
-
-    .skill-icons {
-        gap: 1.75em;
     }
 
     .upgrading {
@@ -124,4 +138,14 @@ div {
         }
     }
 
+}
+
+@media (max-width: 752px) {
+    .skill-container {
+        flex-direction: column;
+    }
+
+    .skill-icons {
+        justify-content: center;
+    }
 }

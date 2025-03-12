@@ -1,7 +1,8 @@
 .main-container {
     background-color: #89BCD9;
     padding: 4em 0em;
-    gap: 410px;
+    gap: 25.62em;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -73,5 +74,37 @@
             background: url("../../assets/Images/linkedinDarkhvrd.png");
             transition: 0.35s;
         }
+    }
+}
+
+@media (max-width: 1320px) {
+    .main-container {
+        gap: 23.10em;
+    }
+}
+
+
+@media (max-width: 1270px) {
+    .main-container {
+        gap: 19.95em;
+    }
+}
+
+@media (max-width: 1170px) {
+    .main-container {
+        gap: 16.72em;
+    }
+}
+
+
+@media (max-width: 1029px) {
+    .main-container {
+        gap: 12.32em;
+    }
+}
+
+@media (max-width: 752px) {
+    .main-container {
+        gap: 8.30em;
     }
 }

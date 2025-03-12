@@ -62,3 +62,10 @@
     background-position: center;
     color: #ffffff !important;
 }
+
+@media (max-width: 752px){
+
+    .nav-bar{
+        display: none;
+    }
+}

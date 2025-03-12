@@ -111,3 +111,17 @@ div {
         gap: 2.8em;
     }
 }
+
+@media (max-width: 752px){
+
+    div{
+        >span{
+            font-size: 1.4rem;
+        }
+    }
+
+    .ref-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
