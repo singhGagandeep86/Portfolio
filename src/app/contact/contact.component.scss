@@ -325,8 +325,12 @@ button {
             width: 100%;
             align-items: center;
 
-            >p {
+            >p:nth-child(1) {
                 display: none;
+            }
+
+            >p:nth-child(3) {
+                margin-right: auto;
             }
 
             >input {
@@ -337,8 +341,14 @@ button {
 
     .message-container {
         align-items: center;
-        >p {
+
+        >p:nth-child(1) {
             display: none;
         }
+
+        >p:nth-child(3) {
+            margin-right: auto;
+        }
+
     }
 }
