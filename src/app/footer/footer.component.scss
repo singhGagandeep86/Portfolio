@@ -103,8 +103,37 @@
     }
 }
 
+@media (max-width: 852px){
+    .main-container{
+        gap: 9.98em;
+    }
+}
+
 @media (max-width: 752px) {
     .main-container {
         gap: 8.30em;
+    }
+}
+
+@media (max-width: 696px){
+    .main-container{
+        flex-direction: column;
+        gap: 2em;
+        padding: 2em 0em;
+    }
+
+    .left-part{
+        flex-direction: row;
+        order: 2;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .right-part{
+        order: 1;
+    }
+
+    .self-logo{
+        order: -1;
     }
 }

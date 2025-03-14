@@ -140,6 +140,19 @@ div {
 
 }
 
+@media (max-width: 850px) {
+
+    .upgrading {
+        font-size: 0.86rem;
+
+        >img {
+            width: 21em;
+            margin-left: 1em;
+        }
+    }
+
+}
+
 @media (max-width: 752px) {
     .skill-container {
         flex-direction: column;

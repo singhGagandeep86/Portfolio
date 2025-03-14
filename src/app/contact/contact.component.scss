@@ -253,24 +253,21 @@ button {
     }
 }
 
-@media (max-width: 752px) {
+@media (max-width: 846px) {
 
     .main-container {
-
-        >div:nth-child(1) {
-            flex-direction: column-reverse;
-            align-items: center;
-            gap: 6em;
+        >div {
+            >span {
+                margin: 0em 3em;
+            }
         }
-
     }
 
     form {
-        width: 90%;
+        width: 94%;
     }
 
     .input-container {
-        width: 100%;
         gap: 1em;
     }
 
@@ -281,6 +278,67 @@ button {
                 left: 4%;
                 margin-top: 9%;
             }
+        }
+    }
+
+}
+
+@media (max-width: 752px) {
+
+    .main-container {
+
+        >div:nth-child(1) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 6em;
+        }
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 716px) {
+
+    .main-container {
+        >div {
+            flex-direction: column;
+            align-items: center;
+
+            span {
+                margin: 0em;
+            }
+        }
+    }
+
+    form {
+        gap: 3em;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+
+        >div {
+            width: 100%;
+            align-items: center;
+
+            >p {
+                display: none;
+            }
+
+            >input {
+                width: 88%;
+            }
+        }
+    }
+
+    .message-container {
+        align-items: center;
+        >p {
+            display: none;
         }
     }
 }

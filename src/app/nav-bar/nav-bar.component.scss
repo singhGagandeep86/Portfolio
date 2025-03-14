@@ -63,6 +63,13 @@
     color: #ffffff !important;
 }
 
+@media (max-width: 852px){
+
+    .nav-bar{
+        gap: 6%;
+    }
+}
+
 @media (max-width: 752px){
 
     .nav-bar{
