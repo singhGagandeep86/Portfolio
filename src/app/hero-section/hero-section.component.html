@@ -11,14 +11,14 @@
         </div>
 
         <div #mobileNav class="mobile-nav">
-            <a href="#aboutMe" (click)="tabClicked($event)" [ngClass]="aboutMeStatus ? 'clicked' : ''">Why me</a>
-            <a href="#mySkills" (click)="tabClicked($event)" [ngClass]="mySkillsStatus ? 'clicked' : ''">Skills</a>
-            <a href="#" (click)="tabClicked($event)" [ngClass]="projectsStatus ? 'clicked' : ''">Projects</a>
-            <a href="#contact" (click)="tabClicked($event)" [ngClass]="contactStatus ? 'clicked' : ''">Contact</a>
+            <a href="#aboutMe" [ngClass]="aboutMeStatus ? 'clicked' : ''">Why me</a>
+            <a href="#mySkills" [ngClass]="mySkillsStatus ? 'clicked' : ''">Skills</a>
+            <a href="#projects" [ngClass]="projectsStatus ? 'clicked' : ''">Projects</a>
+            <a href="#contact" [ngClass]="contactStatus ? 'clicked' : ''">Contact</a>
         
             <div class="lang-box">
-                <a href="#" id="german" (click)="tabClicked($event)" [ngClass]="germanLangSelected ? 'lang-selected' : ''">DE</a>
-                <a href="#" id="english" (click)="tabClicked($event)" [ngClass]="englishLangSelected ? 'lang-selected' : ''">EN</a>
+                <a href="#" id="german" [ngClass]="germanLangSelected ? 'lang-selected' : ''">DE</a>
+                <a href="#" id="english" [ngClass]="englishLangSelected ? 'lang-selected' : ''">EN</a>
             </div>
 
             <img src="./assets/Images/mobileNav.png">
