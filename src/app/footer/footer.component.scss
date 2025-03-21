@@ -14,7 +14,7 @@
     flex-direction: column;
     gap: 16px;
     font-family: 'josefin sans';
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #262E34;
 
     >a {
@@ -103,8 +103,8 @@
     }
 }
 
-@media (max-width: 852px){
-    .main-container{
+@media (max-width: 852px) {
+    .main-container {
         gap: 9.98em;
     }
 }
@@ -115,25 +115,32 @@
     }
 }
 
-@media (max-width: 696px){
-    .main-container{
+@media (max-width: 696px) {
+    .main-container {
         flex-direction: column;
         gap: 2em;
         padding: 2em 0em;
     }
 
-    .left-part{
+    .left-part {
         flex-direction: row;
         order: 2;
         width: 100%;
         justify-content: space-evenly;
     }
 
-    .right-part{
+    .right-part {
         order: 1;
     }
 
-    .self-logo{
+    .self-logo {
         order: -1;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .left-part {
+        font-size: .8rem;
     }
 }

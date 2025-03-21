@@ -3,11 +3,11 @@
     <div>
         <span>Contact me</span>
 
-        <!-- <div class="scroller alternate" (click)="scrollUp()"></div> -->
         <a href="#hero" class="scroller alternate"></a>
     </div>
 
     <div class="contacts">
+        <span>Let’s work together</span>
         <div class="text">
             <span>Let’s work together</span>
             <p>
@@ -27,14 +27,14 @@
             <div>
 
                 <p>Your name </p><input #name="ngModel" [(ngModel)]="contactData.name" name="first" type="text"
-                    required>
+                    placeholder="Your name" required>
                 <p [ngStyle]="{'opacity': !name.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                     Please enter your Name</p>
 
             </div>
             <div>
                 <p>Your Email </p><input #mail="ngModel" [(ngModel)]="contactData.eMail" name="email" type="email"
-                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    placeholder="Your Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <p [ngStyle]="{'opacity': !mail.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                     Please enter your valid Email</p>
 
@@ -43,7 +43,7 @@
 
         <div class="message-container">
             <p>Your message </p><textarea #message="ngModel" [(ngModel)]="contactData.message" name="message"
-                type="text" rows="6" required></textarea>
+                placeholder="Your message" type="text" rows="6" required></textarea>
             <p [ngStyle]="{'opacity': !message.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                 Please
                 enter your message</p>
@@ -55,8 +55,9 @@
                 <input #check type="checkbox" (click)="policyRead && contactData.accepted = !contactData.accepted"
                     name="check" id="check" required>
                 <label for="check"><img src="./assets/Images/check.png"></label>
-                I've read the <a target="_blank" href="privacy" (click)="policyRead = true"> privacy policy</a> and
-                agree to the processionof my data as outlined.
+                <em>I've read the <a target="_blank" href="privacy" (click)="policyRead = true"> privacy policy</a>
+                    and agree to the procession of my data as outlined.
+                </em>
                 <span [ngStyle]="{'opacity': !policyRead && check.checked ? 1 : 0}"> Please read privacy Policy first
                 </span>
             </div>
@@ -64,6 +65,8 @@
                 Please agree to privacy policy</p>
         </div>
         <button></button>
+
+        <a href="#hero" class="scroller alternate"></a>
 
     </form>
 

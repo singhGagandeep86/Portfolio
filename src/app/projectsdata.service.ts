@@ -52,7 +52,7 @@ export class ProjectsdataService {
     }
   ]
 
-
+  projectName: string = this.projects[0].name;
   projectDuration: string = this.projects[0].duration;
   projectDescription: string = this.projects[0].description;
   projectLearnProcess: string = this.projects[0].learnProcess;

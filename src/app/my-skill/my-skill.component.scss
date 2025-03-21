@@ -1,3 +1,5 @@
+@import '../../app/about-me/about-me.component.scss';
+
 div {
     display: flex;
     flex-direction: column;
@@ -11,7 +13,15 @@ div {
     justify-content: center;
     width: 100%;
     min-height: 24.75em;
-    gap: 79px;
+    gap: 4.93em;
+
+    >span {
+        display: none;
+        text-align: center;
+        font-family: "josefin sans";
+        font-size: 1.2rem;
+        color: #89BCD9;
+    }
 }
 
 .skill-icons {
@@ -156,9 +166,63 @@ div {
 @media (max-width: 752px) {
     .skill-container {
         flex-direction: column;
+        gap: 5.82em;
     }
 
     .skill-icons {
         justify-content: center;
+    }
+}
+
+@media (max-width: 420px) {
+
+    div {
+        >a {
+            opacity: 1;
+            margin-top: 3.5em;
+        }
+    }
+
+    .skill-container {
+
+        gap: 3.85em;
+
+        >span {
+            display: block;
+        }
+    }
+
+    .skill-icons {
+        gap: 2em;
+        width: 19em;
+    }
+
+    .upgrading {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+        >span {
+            display: none;
+        }
+
+        >div {
+            gap: 1em;
+            width: auto;
+        }
+
+        >img {
+            width: 10em;
+            right: 0;
+
+            &:hover {
+                width: 8.5em;
+                right: 1.5em;
+            }
+        }
+
+        >p {
+            width: 10em;
+        }
     }
 }

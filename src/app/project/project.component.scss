@@ -14,16 +14,17 @@ div {
     font-size: 1.875rem;
     gap: 4em;
     width: 100%;
-    // padding: 0em 3.5em;
+
 
     >div {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         color: #89BCD9;
         width: 8.48em;
-        // min-width: 254px;
+        white-space: pre;
 
         &:hover {
             color: #ffffff;
@@ -110,44 +111,63 @@ div {
         height: 282px;
         border-radius: 30px;
     }
+}
 
-    :nth-child(3) {
+.project-links, .project-links-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+
+    >a {
         display: flex;
-        flex-direction: row;
+        align-items: center;
         justify-content: center;
-        gap: 10px;
+        text-decoration: none;
+        border-radius: 30px;
+        width: 120px;
+        height: 48px;
+        font-family: 'Josefin Sans';
+        font-size: 18px;
+    }
 
-        >a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            border-radius: 30px;
-            width: 120px;
-            height: 48px;
-            font-family: 'Josefin Sans';
-            font-size: 18px;
+    :nth-child(1) {
+        background-color: #89BCD9;
+        color: #0A383F;
+
+        &:hover {
+            background-color: #F8F5EC;
         }
+    }
 
-        :nth-child(1) {
-            background-color: #89BCD9;
-            color: #0A383F;
+    :nth-child(2) {
+        background-color: none;
+        border: 1px solid #89BCD9;
+        color: #89BCD9;
 
-            &:hover {
-                background-color: #F8F5EC;
-            }
+        &:hover {
+            background-color: #F8F5EC1F;
+
         }
+    }
+}
 
-        :nth-child(2) {
-            background-color: none;
-            border: 1px solid #89BCD9;
-            color: #89BCD9;
+.project-links-mobile {
+    display: none;
+}
 
-            &:hover {
-                background-color: #F8F5EC1F;
+.mobile-version {
+    display: none;
+    font-family: 'josefin sans';
 
-            }
-        }
+    >span {
+        color: #89BCD9;
+        font-size: 1.24rem;
+    }
+
+    >p {
+        font-size: 0.78rem;
+        color: #F8F5EC;
     }
 }
 
@@ -245,7 +265,6 @@ div {
     }
 
     .description {
-        // padding: 2em 4em;
 
         >h3 {
             font-size: 1.45rem;
@@ -348,7 +367,7 @@ div {
 @media (max-width: 835px) {
     .project-nav {
         font-size: 1.48rem;
-        
+
     }
 }
 
@@ -362,6 +381,7 @@ div {
 
     .project-detail {
         flex-direction: column-reverse;
+        justify-content: space-evenly;
     }
 
     .description {
@@ -372,4 +392,93 @@ div {
     .clicked {
         padding: 22px 8px
     }
+}
+
+@media (max-width: 620px) {
+
+    .project-nav {
+        gap: 0.4em;
+    }
+
+    .clicked {
+        padding: 22px 2px;
+    }
+}
+
+@media (max-width: 548px) {
+
+    .project-nav {
+
+        width: 98%;
+        gap: 0;
+
+        >div {
+
+            font-size: 1.12rem;
+
+            >span {
+                font-size: 0;
+            }
+
+            >span::after {
+                content: 'project';
+                font-size: 1.12rem;
+            }
+        }
+    }
+
+    .description{
+        >h3{
+            >p{
+                display: none;
+            }
+        }
+    }
+
+    .project-detail {
+        padding: 2.35em 0em;
+        border-bottom-right-radius: 1.87em;
+        border-bottom-left-radius: 1.87em;
+        gap: 1.2em;
+    }
+
+    .clicked {
+        padding: 16px 0px;
+    }
+
+
+
+    .project-optics {
+
+        width: 85%;
+        padding: 0;
+
+        >:nth-child(3), :nth-child(1) {
+            display: none;
+        }
+
+    }
+
+    .project-links {
+        display: none;
+    }
+
+    .project-links-mobile {
+        display: flex;
+    }
+
+    .mobile-version {
+        display: block;
+        width: 90%;
+    }
+
+    .animate-proj-img {
+        animation: none;
+    }
+
+    .animate-link-tabs {
+        animation: none;
+        opacity: 1;
+    }
+
 }

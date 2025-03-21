@@ -20,7 +20,6 @@
             margin: 0em 4em;
         }
     }
-
 }
 
 .contacts {
@@ -28,6 +27,10 @@
     flex-direction: row;
     gap: 2.25em;
     margin: 0em;
+
+    >span{
+        display: none;
+    }
 }
 
 .text {
@@ -102,6 +105,11 @@ form {
     gap: 8px;
     font-family: 'josefin sans';
     font-size: 0.875rem;
+
+    >a {
+        display: none;
+    }
+
 }
 
 
@@ -132,6 +140,10 @@ form {
             color: #ffffff;
             border-radius: 30px;
             font-size: 1.125rem;
+
+            &::placeholder {
+                opacity: 0;
+            }
         }
     }
 }
@@ -157,6 +169,10 @@ form {
         font-family: 'josefin sans';
         font-size: 1.125rem;
         resize: none;
+
+        &::placeholder {
+            opacity: 0;
+        }
     }
 }
 
@@ -173,6 +189,7 @@ form {
         flex-direction: row;
         align-items: center;
         color: #F8F5EC;
+        white-space: nowrap;
 
         >input {
             opacity: 0;
@@ -185,8 +202,6 @@ form {
         >label {
             margin-right: 0.3em;
             cursor: pointer;
-            display: flex;
-            flex-direction: row;
 
             &:hover {
                 content: url("../../assets/Images/checkHover.png");
@@ -194,15 +209,19 @@ form {
             }
         }
 
-        >a {
-            margin: 0em 0.4em;
-            text-decoration: none;
-            color: #89BCD9;
-        }
-
         >span {
             color: rgb(255, 0, 0);
             margin-left: 0.8em;
+        }
+
+        >em {
+            font-style: normal;
+            white-space: pre-wrap !important;
+
+            >a {
+                text-decoration: none;
+                color: #89BCD9;
+            }
         }
     }
 }
@@ -217,7 +236,7 @@ button {
     width: 115px !important;
     height: 53px;
     border: none;
-    margin-left: 90%;
+    margin-left: auto;
     margin-bottom: 56px;
 
     &:hover {
@@ -350,5 +369,99 @@ button {
             margin-right: auto;
         }
 
+    }
+}
+
+@media (max-width: 632px) {
+
+    .chk-btn {
+        >div {
+            align-items: flex-start;
+
+            >label {
+                margin-top: -1%;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+
+    .main-container {
+        gap: 0;
+
+        >div {
+
+            flex-direction: column-reverse;
+
+            >a {
+                display: none;
+            }
+
+            >span {
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    .contacts {
+        flex-direction: column-reverse;
+        margin-bottom: 3em;
+
+        >span{
+            display: block;
+            font-family: 'josefin sans' !important;
+            font-size: 1.45rem !important;
+        }
+    }
+
+    .cntct-detail {
+        >div {
+            gap: 0.6em;
+        }
+    }
+
+    .text {
+        width: 18.4em;
+        align-items: center;
+
+        >span {
+            display: none;
+        }
+    }
+
+    .input-container {
+        >div {
+            width: 96%;
+
+            >input {
+                width: 84%;
+
+                &::placeholder {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .message-container {
+
+        :nth-child(2) {
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+
+    form {
+        >a {
+            display: block;
+            position: relative;
+            bottom: 82px;
+            width: 2.37em;
+            height: 5.96em;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 }

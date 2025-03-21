@@ -8,7 +8,6 @@ body {
   max-width: 1440px;
   color: #ffffff;
   scroll-behavior: smooth;
-  // overflow-x: hidden;
 }
 
 app-root {
@@ -22,13 +21,21 @@ app-root {
 
 h1 {
   font-family: 'anta';
-  font-size: 60px;
+  font-size: 3.75rem;
   color: #89BCD9;
 }
 
+.hide{
+  display: none !important;
+}
+
+.show{
+  display: flex !important;
+}
+
 .scroller {
-  Width: 38px;
-  Height: 89px;
+  Width: 2.37em;
+  Height: 5.56em;
   background: url("./assets/Images/Arrowdown.png");
   transition: 0.35s;
 
@@ -60,7 +67,7 @@ h1 {
 
   >p {
     font-family: 'josefin sans';
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 0px;
     color: #89BCD9;
   }
@@ -71,20 +78,20 @@ h1 {
   }
 }
 
-.apear-from-left{
+.apear-from-left {
   animation: from-left 0.4s ease-in forwards;
 }
 
 
 @keyframes from-left {
   0% {
-      opacity: 0;
-      transform: translateX(-600%);
+    opacity: 0;
+    transform: translateX(-600%);
   }
 
   100% {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -94,17 +101,18 @@ h1 {
 
 @keyframes from-right {
   0% {
-      opacity: 0;
-      transform: translateX(300px);
+    opacity: 0;
+    transform: translateX(300px);
   }
 
   100% {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-app-legal-notice, app-privacy {
+app-legal-notice,
+app-privacy {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,4 +139,34 @@ app-legal-notice, app-privacy {
   font-weight: 400;
   src: url('./assets/Fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+@media (max-width: 1145px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+}
+
+@media (max-width: 865px) {
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+}
+
+@media (max-width: 752px) {
+
+  .scroller {
+    margin-top: 2em;
+  }
+}
+
+@media (max-width: 378px) {
+  h1 {
+    font-size: 2rem;
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { MySkillComponent } from '../my-skill/my-skill.component';
 
 @Component({
   selector: 'app-about-me',

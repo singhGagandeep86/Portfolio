@@ -98,6 +98,7 @@ export class ProjectComponent implements AfterViewInit {
   }
 
   selectedProjectUpdate(index: number) {
+    this.projects.projectName = this.projects.projects[index].name;
     this.projects.projectDuration = this.projects.projects[index].duration;
     this.projects.projectDescription = this.projects.projects[index].description;
     this.projects.projectLearnProcess = this.projects.projects[index].learnProcess;

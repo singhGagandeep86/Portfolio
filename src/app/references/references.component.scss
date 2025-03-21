@@ -11,6 +11,10 @@ div {
         font-family: 'josefin sans';
         font-size: 2rem;
         color: #89BCD9;
+
+        >em {
+            font-style: normal;
+        }
     }
 }
 
@@ -118,7 +122,7 @@ div {
     }
 }
 
-@media (max-width: 835px){
+@media (max-width: 835px) {
 
     .ref-container {
         overflow-x: auto;
@@ -145,23 +149,33 @@ div {
     div {
         >span {
             font-size: 1.4rem;
+            text-align: center;
         }
     }
 
     .ref-container {
         width: 80%;
-        // overflow-x: auto;
-        // overflow-y: hidden;
-        // justify-content: flex-start;
         padding: 0% 10%;
         gap: 4.2em;
+    }
+}
 
-        // >div {
-        //     position: relative;
-        // }
+@media (max-width: 420px) {
+
+    div {
+        >span {
+            display: flex;
+            flex-direction: column;
+            font-family: 'anta';
+            font-size: 2rem;
+            line-height: 1em;
+
+            >em {
+                color: #F8F5EC;
+                font-size: 1rem;
+                font-family: 'josefin sans';
+            }
+        }
     }
 
-    // ::-webkit-scrollbar {
-    //     display: none;
-    // }
 }

@@ -5,12 +5,18 @@
         <div class="project-nav">
 
             @for (project of projects.projects; track $index) {
-            <div (click)="selectProject($index, $event)" [ngClass]="clicked[$index] ? 'clicked' : ''">{{ $index + 1}}.
-                {{ project.name}}
+            <div (click)="selectProject($index, $event)" [ngClass]="clicked[$index] ? 'clicked' : ''">
+                {{ $index + 1 }}. <span>{{ project.name }}</span>
             </div>
             }
         </div>
         <div class="project-detail">
+
+            <div class="project-links-mobile" #projectLinks>
+                <a href="{{ projects.projectLink }}" target="_blank">Live Test</a>
+                <a href="{{ projects.projectGithub }}" target="_blank">GitHub</a>
+            </div>
+
             <div class="description">
                 <h3><img src="./assets/Images/EllipseSmall.png"> About the Project
                     @if ( projects.projectDuration) {
@@ -37,10 +43,18 @@
 
                 <img id="projScreen" #projScreen src="{{ projects.projectImage }}">
 
-                <div #projectLinks>
+                <div class="project-links" #projectLinks>
                     <a href="{{ projects.projectLink }}" target="_blank">Live Test</a>
                     <a href="{{ projects.projectGithub }}" target="_blank">GitHub</a>
                 </div>
+            </div>
+
+            <div class="mobile-version">
+                <span>
+                    {{ projects.projectName }}
+                </span>
+                <p>Technologies: {{ projects.projectTechnologies }}</p>
+                <p>Duration: {{ projects.projectDuration }}</p>
             </div>
         </div>
 

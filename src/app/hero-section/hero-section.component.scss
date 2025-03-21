@@ -1,3 +1,5 @@
+@import url('../../app/nav-bar/nav-bar.component.scss');
+
 .main-container {
     display: flex;
     flex-direction: row;
@@ -20,16 +22,25 @@
     margin-top: 3px;
 }
 
-.overlay{
+.overlay {
     display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 96%;
+}
 
-    :nth-child(2){
-        cursor: pointer;
-    }
+.toggle-icon{
+    cursor: pointer;
+    content: url("../../assets/Images/menuBtn.png");
+}
+
+.toggle-icon-clicked{
+    content: url('../../assets/Images/mobileMenuClosed.png');
+}
+
+.mobile-nav {
+    display: none;
 }
 
 .pic-part {
@@ -150,11 +161,6 @@
 
 @media (max-width: 1145px) {
 
-    .main-container {
-        height: auto;
-        margin: 10% 0%;
-    }
-
     .head-part {
         >span {
             font-size: 3rem;
@@ -184,13 +190,51 @@
 
     .main-container {
 
+        height: auto;
+        margin: 10% 0%;
+
         >div {
             flex-direction: column;
+            gap: 4em;
         }
     }
 
-    .overlay{
-       display: flex;
+    .pic-part {
+        width: 21.5em;
+    }
+
+    .overlay {
+        display: flex;
+    }
+
+    .mobile-nav {
+        width: 26em;
+        height: 22em;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        >a {
+            text-decoration: none;
+            color: #262E34;
+            font-family: 'josefin sans';
+            font-size: 1.37rem;
+            z-index: 100;
+
+            &:hover {
+                color: #ffffff;
+            }
+        }
+
+        .lang-box{
+            z-index: 100;
+        }
+
+        >img{
+            position: absolute;
+        }
     }
 
     .head-part {
@@ -200,5 +244,40 @@
         >div {
             display: none;
         }
+    }
+}
+
+@media (max-width: 435px){
+
+    .mobile-nav{
+        width: auto;
+        height: auto;
+        gap: 2em;
+        justify-content: center;
+
+        >img{
+            // width: 100%;
+            // width: 76%;
+            width: 18em;
+            height: 20em;
+        }
+    }
+}
+
+
+@media (max-width: 378px) {
+
+    .head-part {
+        >span {
+            font-size: 2rem;
+        }
+
+        >p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .pic-part {
+        width: 100%;
     }
 }
