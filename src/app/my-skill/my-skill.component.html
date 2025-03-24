@@ -1,5 +1,10 @@
 <div>
+
+    @if ( VariableService.deutsch ) {
+    <h1>Fähigkeiten</h1>
+    } @else {
     <h1>My Skills</h1>
+    }
 
     <div class="skill-container">
         <div class="skill-icons">
@@ -15,22 +20,45 @@
             <img src="./assets/Images/Scrum.png">
         </div>
 
+        @if ( VariableService.deutsch ) {
+        <span>Ich lerne derzeit</span>
+        } @else {
         <span>I am current learning</span>
+        }
 
         <div class="upgrading">
             <img src="">
+            @if ( VariableService.deutsch ) {
+            <span>Ich lerne derzeit</span>
+            } @else {
             <span>I am current learning</span>
+            }
             <div>
                 <img src="./assets/Images/React.png">
                 <img src="./assets/Images/Vuejs.png">
             </div>
+
+            @if ( VariableService.deutsch ) {
+            <p>
+                Motiviert zu bleiben, um meine IT-Kenntnisse zu erweitern, braucht Strategie,
+                Neugier und den Willen zum lebenslangen Lernen.
+            </p>
+            } @else {
             <p>
                 Staying motivated to expand my IT skills requires a strategic approach,
                 a curious mindset, and a commitment to lifelong learning.
             </p>
+            }
+
         </div>
     </div>
 
-    <a #talkButton href="#contact" class="talk-btn"></a>
+    @if (VariableService.deutsch) {
+        <a #talkButton href="#contact" class="talk-btn btn-opt">Kontakt aufnehmen</a>
+        }
+        @else{
+        <a #talkButton href="#contact" class="talk-btn"> Let's talk </a>
+        }
+    <!-- <a #talkButton href="#contact" class="talk-btn"></a> -->
 
 </div>

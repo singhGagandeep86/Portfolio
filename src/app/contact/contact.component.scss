@@ -294,8 +294,8 @@ button {
         >div {
             >span {
                 position: absolute;
-                left: 4%;
-                margin-top: 9%;
+                left: 8%;
+                margin-top: 10%;
             }
         }
     }
@@ -462,6 +462,15 @@ button {
             height: 5.96em;
             background-size: contain;
             background-repeat: no-repeat;
+        }
+    }
+
+    .chk-btn{
+        >div{
+            >span{
+                margin-top: 20%;
+                left: 4%;
+            }
         }
     }
 }

@@ -5,14 +5,20 @@
         <sub>developer</sub>
     </div>
 
-    <a href="#aboutMe" (click)="tabClicked($event)" [ngClass]="aboutMeStatus ? 'clicked' : ''">Why me</a>
-    <a href="#mySkills" (click)="tabClicked($event)" [ngClass]="mySkillsStatus ? 'clicked' : ''">Skills</a>
-    <a href="#" (click)="tabClicked($event)" [ngClass]="projectsStatus ? 'clicked' : ''">Projects</a>
-    <a href="#contact" (click)="tabClicked($event)" [ngClass]="contactStatus ? 'clicked' : ''">Contact</a>
+    <a href="#aboutMe" (click)="tabClicked($event)" [ngClass]="aboutMeStatus ? 'clicked' : ''">@if
+        (VariableService.deutsch) {Über mich}@else { Why me}</a>
+    <a href="#mySkills" (click)="tabClicked($event)" [ngClass]="mySkillsStatus ? 'clicked' : ''">@if
+        (VariableService.deutsch) { Fähigkeiten }@else { Skills }</a>
+    <a href="#projects" (click)="tabClicked($event)" [ngClass]="projectsStatus ? 'clicked' : ''">@if
+        (VariableService.deutsch) { Projekten }@else { Projects }</a>
+    <a href="#contact" (click)="tabClicked($event)" [ngClass]="contactStatus ? 'clicked' : ''">@if
+        (VariableService.deutsch) { Kontakt }@else { Contact }</a>
 
     <div class="lang-box">
-        <a href="#" id="german" (click)="tabClicked($event)" [ngClass]="germanLangSelected ? 'lang-selected' : ''">DE</a>
-        <a href="#" id="english" (click)="tabClicked($event)" [ngClass]="englishLangSelected ? 'lang-selected' : ''">EN</a>
+        <a id="german" (click)="tabClicked($event)"
+            [ngClass]="VariableService.deutsch ? 'lang-selected' : ''">DE</a>
+        <a id="english" (click)="tabClicked($event)"
+            [ngClass]="VariableService.english ? 'lang-selected' : ''">EN</a>
     </div>
 
 </div>

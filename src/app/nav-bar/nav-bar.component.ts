@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ViewportScroller } from '@angular/common';
-import { WindowService } from '../window.service';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -18,16 +17,11 @@ export class NavBarComponent {
   mySkillsStatus: boolean = false
   projectsStatus: boolean = false;
   contactStatus: boolean = false;
-  germanLangSelected: boolean = false;
-  englishLangSelected: boolean = true;
 
   @ViewChild('projectSection') projectSection?: ElementRef;
 
   tabClicked(event: Event) {
     const clickedElement = event.target as HTMLElement;
-
-    this.windowService.scrollToHeroSection();
-
 
     if (clickedElement.id == 'aboutMe') {
       this.aboutMeStatus = true;
@@ -58,17 +52,17 @@ export class NavBarComponent {
     }
 
     if (clickedElement.id == 'german') {
-      this.germanLangSelected = true;
-      this.englishLangSelected = false;
+      this.VariableService.deutsch = true;
+      this.VariableService.english = false;
     }
 
     if (clickedElement.id == 'english') {
-      this.germanLangSelected = false;
-      this.englishLangSelected = true;
+      this.VariableService.english = true;
+      this.VariableService.deutsch = false;
     }
 
   }
 
-  constructor(private scroller: ViewportScroller, public windowService: WindowService ) { }
+  constructor(public VariableService: VariableService) { }
 
 }

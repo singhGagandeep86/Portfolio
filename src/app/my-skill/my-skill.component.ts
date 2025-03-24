@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-my-skill',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './my-skill.component.scss'
 })
 export class MySkillComponent {
+
+  constructor ( public VariableService: VariableService ){}
 
 }

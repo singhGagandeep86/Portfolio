@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     height: 104px;
-    gap: 8%;
+    gap: 7%;
     background-color: #89BCD9;
     width: 100%;
     scroll-behavior: smooth;
@@ -28,7 +28,7 @@
     }
 }
 
-.clicked{
+.clicked {
     background: url("../../assets/Images/EllipseSelected.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -56,23 +56,34 @@
 
 }
 
-.lang-selected{
+.lang-selected {
     background: url("../../assets/Images/EllipseSmallSec.png");
     background-repeat: no-repeat;
     background-position: center;
     color: #ffffff !important;
 }
 
-@media (max-width: 852px){
+@media (max-width: 920px) {
 
-    .nav-bar{
+    .nav-bar {
         gap: 6%;
+
+        >a {
+            font-size: 24px;
+        }
     }
 }
 
-@media (max-width: 752px){
+@media (max-width: 830px) {
 
-    .nav-bar{
+    .nav-bar {
+        gap: 4%;
+    }
+}
+
+@media (max-width: 752px) {
+
+    .nav-bar {
         display: none;
     }
 }

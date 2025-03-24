@@ -1,26 +1,40 @@
 <div>
-    <h1>Why me</h1>
+    <h1>@if (VariableService.deutsch) {Über mich}@else { Why me }</h1>
 
     <div #aboutMe class="short-detail">
         <div class="lft-prt">
             <div><img src="./assets/Images/locIcon.png">
-                <p #ptag><span>I am </span>located in Munich</p>
+                <p #ptag> @if (VariableService.deutsch) { <span>Ich </span>befindet mich in München }@else{<span>I am
+                    </span>located in Munich}</p>
             </div>
             <div><img src="./assets/Images/remote.png">
-                <p #ptag2><span>I am </span>open to remote work</p>
+                <p #ptag2> @if (VariableService.deutsch) { <span>Ich </span>bin offen für Remote-Arbeit }@else{<span>I
+                        am </span>open to remote work}</p>
             </div>
             <div><img src="./assets/Images/Challenges.png">
-                <p #ptag3><span>I am </span>open to new Challenges</p>
+                <p #ptag3> @if (VariableService.deutsch) { <span>Ich </span>bin offen für neue Herausforderungen
+                    }@else{<span>I am </span>open to new Challenges}</p>
             </div>
         </div>
         <div class="rght-prt">
-            <p>
+            <p>@if (VariableService.deutsch) {
+                Ich bin motiviert, kontinuierlich neue Technologien zu erlernen und mich weiterzuentwickeln.
+                Meine Fähigkeit, komplexe Probleme zu lösen, sowie meine Leidenschaft für Programmierung machen
+                mich zu einem wertvollen Mitglied Ihres Teams.
+                } @else {
                 I am motivated to continuously learn new technologies and develop myself. My ability
                 to solve complex problems and my passion for programming make me a valuable member
                 for your team.
+                }
             </p>
 
-            <a #talkButton href="#contact" class="talk-btn"></a>
+
+            @if (VariableService.deutsch) {
+            <a #talkButton href="#contact" class="talk-btn btn-opt">Kontakt aufnehmen</a>
+            }
+            @else{
+            <a #talkButton href="#contact" class="talk-btn"> Let's talk </a>
+            }
         </div>
 
     </div>

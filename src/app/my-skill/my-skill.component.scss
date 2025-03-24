@@ -5,6 +5,11 @@ div {
     flex-direction: column;
     align-items: center;
     width: 100%;
+
+    >a {
+        opacity: 0;
+    }
+
 }
 
 .skill-container {

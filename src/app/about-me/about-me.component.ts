@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { MySkillComponent } from '../my-skill/my-skill.component';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-about-me',
@@ -14,11 +14,12 @@ export class AboutMeComponent {
   @ViewChild('ptag') pTag?: ElementRef;
   @ViewChild('ptag2') pTag2?: ElementRef;
   @ViewChild('ptag3') pTag3?: ElementRef;
-  @ViewChild('talkButton') talkButton?: ElementRef;
 
   locationImage: HTMLImageElement | null = null;
   remoteImage: HTMLImageElement | null = null;
   challengeImage: HTMLImageElement | null = null;
+
+  constructor ( public VariableService: VariableService ){}
 
   ngAfterViewInit(): void {
 
@@ -57,11 +58,6 @@ export class AboutMeComponent {
     setTimeout(() => {
       this.pTag3?.nativeElement.classList.add('animation');
     }, 4200);
-
-    setTimeout(() => {
-      this.talkButton?.nativeElement.classList.add('apear-from-right');
-    }, 5000);
-
   }
 
 
@@ -72,7 +68,6 @@ export class AboutMeComponent {
     this.pTag?.nativeElement.classList.remove('animation');
     this.pTag2?.nativeElement.classList.remove('animation');
     this.pTag3?.nativeElement.classList.remove('animation');
-    this.talkButton?.nativeElement.classList.remove('apear-from-right');
   }
 
 

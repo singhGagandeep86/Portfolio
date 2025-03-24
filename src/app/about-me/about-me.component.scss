@@ -20,7 +20,7 @@ div {
     align-items: flex-start;
     gap: 1em;
     max-width: 60%;
-    width: 34em;
+    width: 42em;
 
     >div {
         display: flex;
@@ -91,20 +91,31 @@ div {
 .talk-btn {
     width: 134px;
     height: 48px;
-    background: url("../../assets/Images/buttonTalk.png");
-    opacity: 0;
+    text-decoration: none;
+    border: 1px solid #89BCD9;
+    color: #89BCD9;
+    line-height: 48px;
+    font-family: 'josefin sans';
+    font-size: 1.125rem;
+    text-align: center;
+    border-radius: 1.87em;
 
     &:hover {
         cursor: pointer;
-        background: url("../../assets/Images/btnTlkHvr.png");
+        background: #F8F5EC1F;
         transition: 0.35s;
     }
 }
 
+.btn-opt {
+    line-height: 24px !important;
+}
 
-@media (max-width: 1065px) {
+
+@media (max-width: 1120px) {
     .short-detail {
-        width: 90%;
+        width: 100%;
+        justify-content: space-evenly;
     }
 
     .lft-prt {
@@ -137,6 +148,33 @@ div {
             }
         }
     }
+}
+
+@media (max-width: 820px) {
+
+    .lft-prt {
+
+        >div {
+
+            margin-right: 0em;
+
+            >img {
+                animation: none !important;
+                opacity: 1;
+            }
+
+            >p {
+                width: 100%;
+                white-space: pre-line !important;
+            }
+        }
+
+    }
+
+    .animation {
+        animation: none !important;
+    }
+
 }
 
 @media (max-width: 752px) {
