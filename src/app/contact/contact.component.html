@@ -1,20 +1,31 @@
 <div class="main-container">
 
     <div>
-        <span>Contact me</span>
+        @if ( VariableService.deutsch) { <span>Kontakt aufnehmen</span> } @else { <span>Contact me</span> }
 
         <a href="#hero" class="scroller alternate"></a>
     </div>
 
     <div class="contacts">
-        <span>Let’s work together</span>
+        @if ( VariableService.deutsch) { <span>Lass uns zusammenarbeiten</span> } @else { <span>Let’s work together</span> }
         <div class="text">
-            <span>Let’s work together</span>
-            <p>
-                Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing
-                to your projects with my work
-                Need a Frontend developer? Let’s talk!
-            </p>
+            @if ( VariableService.deutsch) { <span>Lass uns zusammenarbeiten</span> } @else { <span>Let’s work together</span> }
+            
+            @if ( VariableService.deutsch) {
+                <p>
+                    Kontaktiere mich über dieses Formular – ich freue mich darauf, von dir zu hören, deine Ideen 
+                    kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.
+                    Du suchst einen Frontend-Entwickler? Lass uns sprechen!
+                </p>
+            }
+            @else {
+                <p>
+                    Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing
+                    to your projects with my work
+                    Need a Frontend developer? Let’s talk!
+                </p>
+            }
+        
         </div>
         <div class="cntct-detail">
             <div><img src="./assets/Images/iconEmail.png">E-mail: <b>tech&#64;gagandeepsingh.de</b></div>
@@ -29,25 +40,24 @@
                 <p>Your name </p><input #name="ngModel" [(ngModel)]="contactData.name" name="first" type="text"
                     placeholder="Your name" required>
                 <p [ngStyle]="{'opacity': !name.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    Please enter your Name</p>
+                    @if ( VariableService.deutsch) { Bitte geben Sie Ihren Namen ein } @else { Please enter your Name }</p>
 
             </div>
             <div>
                 <p>Your Email </p><input #mail="ngModel" [(ngModel)]="contactData.eMail" name="email" type="email"
                     placeholder="Your Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <p [ngStyle]="{'opacity': !mail.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    Please enter your valid Email</p>
+                    @if ( VariableService.deutsch) { Gültige E-Mail-Adresse erforderlich. } @else { Please enter your valid Email }</p>
 
             </div>
         </div>
 
         <div class="message-container">
             <p>Your message </p><textarea #message="ngModel" [(ngModel)]="contactData.message" name="message"
-                placeholder="Your message" type="text" rows="6" required></textarea>
+            placeholder="Your message" type="text" rows="6" required></textarea>
             <p [ngStyle]="{'opacity': !message.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                Please
-                enter your message</p>
-
+                @if ( VariableService.deutsch) { Bitte geben Sie Ihre Nachricht ein } @else { Please enter your message }</p>
+               
         </div>
 
         <div class="chk-btn">
@@ -55,9 +65,15 @@
                 <input #check type="checkbox" (click)="policyRead && contactData.accepted = !contactData.accepted"
                     name="check" id="check" required>
                 <label for="check"><img src="./assets/Images/check.png"></label>
-                <em>I've read the <a target="_blank" href="privacy" (click)="policyRead = true"> privacy policy</a>
-                    and agree to the procession of my data as outlined.
-                </em>
+                @if ( VariableService.deutsch) {
+                    <em>Ich habe die <a target="_blank" href="privacy" (click)="policyRead = true"> Datenschutzerklärung</a>
+                        gelesen und akzeptiert.
+                    </em>
+                } @else {
+                    <em>I've read the <a target="_blank" href="privacy" (click)="policyRead = true"> privacy policy</a>
+                        and agree to the procession of my data as outlined.
+                    </em>
+                }
                 <span [ngStyle]="{'opacity': !policyRead && check.checked ? 1 : 0}"> Please read privacy Policy first
                 </span>
             </div>

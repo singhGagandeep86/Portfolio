@@ -1,25 +1,45 @@
 <div>
+    @if ( VariableSerivce.deutsch) {
+    <span>Einen Teamplayer? <em>So beschreiben mich meine Kollegen:</em> </span>
+    }
+    @else {
     <span>Need a teamplayer? <em>Here what my colleagues said about me</em> </span>
+    }
 
     <div class="ref-container">
         <div>
             <img src="">
             <h4>Alexander Winkler</h4>
             <p>Project<span>Join</span></p>
+            @if ( VariableSerivce.deutsch) {
+            <p>
+                "Ich hatte das Vergnügen, im Team mit ihm zusammenzuarbeiten.
+                Er war stets kompetent, hilfsbereit und voller Ideen – eine großartige Zusammenarbeit!"
+            </p>
+            } @else {
             <p>
                 " I had the pleasure of working in a team with him.
                 He was always competent, helpful and full of ideas: a great collaboration! "
             </p>
+            }
         </div>
         <div>
             <img src="">
             <h4>Francisco Naranjo</h4>
             <p>Team Partner<span>Developer Akademie</span></p>
-            <p>
-                "He is a great team player. I was fortunate to
-                work with him on a complex project, where he simplified and refined the code
-                for smooth execution."
-            </p>
+            @if ( VariableSerivce.deutsch) {
+                <p>
+                    "Er ist ein toller Teamplayer. In einem komplexen
+                     Projekt hat er den Code vereinfacht und für reibungslose 
+                     Abläufe gesorgt."
+                </p>
+                } @else {
+                    <p>
+                        "He is a great team player. I was fortunate to
+                        work with him on a complex project, where he simplified and refined the code
+                        for smooth execution."
+                    </p>
+                }
         </div>
     </div>
 

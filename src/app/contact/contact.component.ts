@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class ContactComponent {
 
-  constructor( private http: HttpClient){}
+  constructor( private http: HttpClient,
+    public VariableService: VariableService
+  ){}
 
   contactData = {
     name: "",

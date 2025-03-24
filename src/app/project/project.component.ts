@@ -2,6 +2,7 @@ import { AfterViewInit, asNativeElements, Component, ElementRef, inject, ViewChi
 import { CommonModule } from '@angular/common';
 import { ObserverService } from '../observer.service';
 import { ProjectsdataService } from '../projectsdata.service';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-project',
@@ -22,6 +23,7 @@ export class ProjectComponent implements AfterViewInit {
   @ViewChild('techTitle') techTitle?: ElementRef;
   @ViewChild('projectLinks') projectLinks?: ElementRef;
 
+  constructor( public VariableService: VariableService ) { }
 
   ngAfterViewInit(): void {
     this.observer = new IntersectionObserver((entries) => {
@@ -99,11 +101,16 @@ export class ProjectComponent implements AfterViewInit {
 
   selectedProjectUpdate(index: number) {
     this.projects.projectName = this.projects.projects[index].name;
+    this.projects.projectNameGerman = this.projects.projects[index].nameGerman;
     this.projects.projectDuration = this.projects.projects[index].duration;
     this.projects.projectDescription = this.projects.projects[index].description;
+    this.projects.projectDescriptionGerman = this.projects.projects[index].descriptionGerman;
     this.projects.projectLearnProcess = this.projects.projects[index].learnProcess;
+    this.projects.projectLearnProcessGerman = this.projects.projects[index].learnProcessGerman;
     this.projects.projectHeading = this.projects.projects[index].experience.heading;
+    this.projects.projectHeadingGerman = this.projects.projects[index].experience.headingGerman;
     this.projects.projectDetails = this.projects.projects[index].experience.details;
+    this.projects.projectDetailsGerman = this.projects.projects[index].experience.detailsGerman;
     this.projects.projectImage = this.projects.projects[index].image;
     this.projects.projectTechnologies = this.projects.projects[index].technologies;
     this.projects.projectLink = this.projects.projects[index].link;

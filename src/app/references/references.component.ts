@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-references',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
+
+  constructor ( public VariableSerivce: VariableService ) {}
 
 }

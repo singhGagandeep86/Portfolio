@@ -1,12 +1,17 @@
 <div>
+
+    @if ( VariableService.deutsch ) {
+    <h1>Meine Projekte</h1>
+    } @else {
     <h1>My Projects</h1>
+    }
 
     <div class="project-container">
         <div class="project-nav">
 
             @for (project of projects.projects; track $index) {
             <div (click)="selectProject($index, $event)" [ngClass]="clicked[$index] ? 'clicked' : ''">
-                {{ $index + 1 }}. <span>{{ project.name }}</span>
+                {{ $index + 1 }}. <span> @if ( VariableService.deutsch ){ {{ project.nameGerman }} } @else { {{ project.name }} }</span>
             </div>
             }
         </div>
@@ -18,22 +23,36 @@
             </div>
 
             <div class="description">
-                <h3><img src="./assets/Images/EllipseSmall.png"> About the Project
+                <h3><img src="./assets/Images/EllipseSmall.png">
+                    @if ( VariableService.deutsch ){ Über das Projekt } @else { About the Project }
                     @if ( projects.projectDuration) {
-                    <p> Duration: {{ projects.projectDuration }}</p>
+                    <p> @if ( VariableService.deutsch ){ Dauer: {{ projects.projectDuration }} Wochen }
+                        @else { Duration: {{ projects.projectDuration }} Weeks }</p>
                     }
                 </h3>
-                <p>{{ projects.projectDescription }} </p>
+                @if ( VariableService.deutsch ) { <p>{{ projects.projectDescriptionGerman }}</p> }
+                @else { <p>{{ projects.projectDescription }}</p> }
                 @if (projects.projectLearnProcess) {
-                <h3><img src="./assets/Images/EllipseSmall.png">How I have organised my work process</h3>
-                <p> {{ projects.projectLearnProcess}} </p>
-                <h3><img src="./assets/Images/EllipseSmall.png">{{ projects.projectHeading }}</h3>
-                <p> {{ projects.projectDetails }}</p>
+                <h3><img src="./assets/Images/EllipseSmall.png">
+                    @if ( VariableService.deutsch) { Mein Arbeitsprozess im Überblick }
+                    @else { How I have organised my work process }
+                </h3>
+                <p>@if ( VariableService.deutsch){ {{ projects.projectLearnProcessGerman }} } @else { {{ projects.projectLearnProcess}} }</p>
+                <h3><img src="./assets/Images/EllipseSmall.png">
+                   @if ( VariableService.deutsch) { {{ projects.projectHeadingGerman }} }
+                   @else { {{ projects.projectHeading}}}
+                </h3>
+                <p>@if ( VariableService.deutsch) { {{ projects.projectDetailsGerman }} } @else { {{ projects.projectDetails }} }</p>
                 }
             </div>
             <div class="project-optics">
                 <div>
+                    @if ( VariableService.deutsch) {
+                    <span #techTitle>Technologien</span>
+                    }
+                    @else {
                     <span #techTitle>Technologies</span>
+                    }
                     <div #techIcons>
                         @for (img of projects.projectTechnologies; track projects.projectImage) {
                         <img src="./assets/Images/{{ img }}.png">
@@ -53,8 +72,9 @@
                 <span>
                     {{ projects.projectName }}
                 </span>
-                <p>Technologies: {{ projects.projectTechnologies }}</p>
-                <p>Duration: {{ projects.projectDuration }}</p>
+                <p> @if ( VariableService.deutsch ){ Technologien: } @else { Technologies: } {{
+                    projects.projectTechnologies }}</p>
+                <p> @if ( VariableService.deutsch ){ Dauer: } @else { Duration: } {{ projects.projectDuration }}</p>
             </div>
         </div>
 
