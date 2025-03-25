@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -9,5 +10,7 @@ import { Component } from '@angular/core';
 export class LegalNoticeComponent {
 
   emailString = "mailto: tech@gagandeepsingh.de"
+
+  constructor(public VariableService: VariableService) { }
 
 }

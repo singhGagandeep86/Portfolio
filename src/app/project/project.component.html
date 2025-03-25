@@ -74,7 +74,7 @@
                 </span>
                 <p> @if ( VariableService.deutsch ){ Technologien: } @else { Technologies: } {{
                     projects.projectTechnologies }}</p>
-                <p> @if ( VariableService.deutsch ){ Dauer: } @else { Duration: } {{ projects.projectDuration }}</p>
+                <p> @if ( VariableService.deutsch ){ Dauer: {{ projects.projectDuration }} Wochen } @else { Duration: {{ projects.projectDuration }} Weeks }</p>
             </div>
         </div>
 

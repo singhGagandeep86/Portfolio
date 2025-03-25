@@ -49,7 +49,7 @@ export class ProjectsdataService {
     {
       name: "Ongoing Project",
       nameGerman: "Aktuelles Projekt",
-      duration: 0,
+      duration: 6,
       description: "DA Bubble will be a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
       descriptionGerman: "DA Bubble wird eine Slack-Clone-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit durch eine intuitive Benutzeroberfläche, Echtzeitnachrichten und eine starke Kanalorganisation.",
       learnProcess: "",

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { VariableService } from '../variable.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-privacy',
@@ -7,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './privacy.component.scss'
 })
 export class PrivacyComponent {
+
+  constructor ( public VariableService: VariableService ){}
 
 }

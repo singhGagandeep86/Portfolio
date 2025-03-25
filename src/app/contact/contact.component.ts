@@ -1,8 +1,10 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { VariableService } from '../variable.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +16,8 @@ import { VariableService } from '../variable.service';
 export class ContactComponent {
 
   constructor( private http: HttpClient,
-    public VariableService: VariableService
+    public VariableService: VariableService,
+    public router: Router
   ){}
 
   contactData = {

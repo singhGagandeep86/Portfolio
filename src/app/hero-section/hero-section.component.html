@@ -11,10 +11,18 @@
         </div>
 
         <div #mobileNav class="mobile-nav">
-            <a href="#aboutMe" [ngClass]="aboutMeStatus ? 'clicked' : ''">Why me</a>
-            <a href="#mySkills" [ngClass]="mySkillsStatus ? 'clicked' : ''">Skills</a>
-            <a href="#projects" [ngClass]="projectsStatus ? 'clicked' : ''">Projects</a>
-            <a href="#contact" [ngClass]="contactStatus ? 'clicked' : ''">Contact</a>
+            @if ( VariableService.deutsch ) {
+                <a href="#aboutMe" [ngClass]="aboutMeStatus ? 'clicked' : ''">Uber mich</a>
+                <a href="#mySkills" [ngClass]="mySkillsStatus ? 'clicked' : ''">Fähigkeitem</a>
+                <a href="#projects" [ngClass]="projectsStatus ? 'clicked' : ''">Projekt</a>
+                <a href="#contact" [ngClass]="contactStatus ? 'clicked' : ''">Kontakt</a>
+            }
+            @else {
+                <a href="#aboutMe" [ngClass]="aboutMeStatus ? 'clicked' : ''">Why me</a>
+                <a href="#mySkills" [ngClass]="mySkillsStatus ? 'clicked' : ''">Skills</a>
+                <a href="#projects" [ngClass]="projectsStatus ? 'clicked' : ''">Projects</a>
+                <a href="#contact" [ngClass]="contactStatus ? 'clicked' : ''">Contact</a>
+            }
         
             <div class="lang-box">
                 <a href="#" id="german" [ngClass]="germanLangSelected ? 'lang-selected' : ''">DE</a>

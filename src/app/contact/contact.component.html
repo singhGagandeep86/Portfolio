@@ -7,25 +7,27 @@
     </div>
 
     <div class="contacts">
-        @if ( VariableService.deutsch) { <span>Lass uns zusammenarbeiten</span> } @else { <span>Let’s work together</span> }
+        @if ( VariableService.deutsch) { <span>Lass uns zusammenarbeiten</span> } @else { <span>Let’s work
+            together</span> }
         <div class="text">
-            @if ( VariableService.deutsch) { <span>Lass uns zusammenarbeiten</span> } @else { <span>Let’s work together</span> }
-            
+            @if ( VariableService.deutsch) { <span>Lass uns zusammenarbeiten</span> } @else { <span>Let’s work
+                together</span> }
+
             @if ( VariableService.deutsch) {
-                <p>
-                    Kontaktiere mich über dieses Formular – ich freue mich darauf, von dir zu hören, deine Ideen 
-                    kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.
-                    Du suchst einen Frontend-Entwickler? Lass uns sprechen!
-                </p>
+            <p>
+                Kontaktiere mich über dieses Formular – ich freue mich darauf, von dir zu hören, deine Ideen
+                kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.
+                Du suchst einen Frontend-Entwickler? Lass uns sprechen!
+            </p>
             }
             @else {
-                <p>
-                    Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing
-                    to your projects with my work
-                    Need a Frontend developer? Let’s talk!
-                </p>
+            <p>
+                Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing
+                to your projects with my work
+                Need a Frontend developer? Let’s talk!
+            </p>
             }
-        
+
         </div>
         <div class="cntct-detail">
             <div><img src="./assets/Images/iconEmail.png">E-mail: <b>tech&#64;gagandeepsingh.de</b></div>
@@ -36,28 +38,50 @@
     <form (ngSubmit)="toSubmit(contactForm)" #contactForm="ngForm">
         <div class="input-container">
             <div>
-
+                @if ( VariableService.deutsch) {
+                <p>Name </p><input #name="ngModel" [(ngModel)]="contactData.name" name="first" type="text"
+                    placeholder="Ihr Name" required>
+                <p [ngStyle]="{'opacity': !name.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+                    Bitte geben Sie Ihren Namen ein </p>
+                }
+                @else {
                 <p>Your name </p><input #name="ngModel" [(ngModel)]="contactData.name" name="first" type="text"
                     placeholder="Your name" required>
                 <p [ngStyle]="{'opacity': !name.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    @if ( VariableService.deutsch) { Bitte geben Sie Ihren Namen ein } @else { Please enter your Name }</p>
-
+                    Please enter your Name </p>
+                }
             </div>
             <div>
+
+                @if ( VariableService.deutsch) {
+                <p>Email </p><input #mail="ngModel" [(ngModel)]="contactData.eMail" name="email" type="email"
+                    placeholder="Ihre Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <p [ngStyle]="{'opacity': !mail.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+                    Gültige E-Mail-Adresse erforderlich.</p>
+                }
+                @else {
                 <p>Your Email </p><input #mail="ngModel" [(ngModel)]="contactData.eMail" name="email" type="email"
                     placeholder="Your Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <p [ngStyle]="{'opacity': !mail.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    @if ( VariableService.deutsch) { Gültige E-Mail-Adresse erforderlich. } @else { Please enter your valid Email }</p>
-
+                    Please enter your valid Email </p>
+                }
             </div>
         </div>
 
         <div class="message-container">
-            <p>Your message </p><textarea #message="ngModel" [(ngModel)]="contactData.message" name="message"
-            placeholder="Your message" type="text" rows="6" required></textarea>
+            @if ( VariableService.deutsch) {
+            <p>Ihre Nachricht </p><textarea #message="ngModel" [(ngModel)]="contactData.message" name="message"
+                placeholder="Ihre Nachricht" type="text" rows="6" required></textarea>
             <p [ngStyle]="{'opacity': !message.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                @if ( VariableService.deutsch) { Bitte geben Sie Ihre Nachricht ein } @else { Please enter your message }</p>
-               
+                Bitte geben Sie Ihre Nachricht ein </p>
+            }
+
+            @else {
+            <p>Your message </p><textarea #message="ngModel" [(ngModel)]="contactData.message" name="message"
+                placeholder="Your message" type="text" rows="6" required></textarea>
+            <p [ngStyle]="{'opacity': !message.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+                Please enter your message </p>
+            }
         </div>
 
         <div class="chk-btn">
@@ -66,19 +90,27 @@
                     name="check" id="check" required>
                 <label for="check"><img src="./assets/Images/check.png"></label>
                 @if ( VariableService.deutsch) {
-                    <em>Ich habe die <a target="_blank" href="privacy" (click)="policyRead = true"> Datenschutzerklärung</a>
-                        gelesen und akzeptiert.
-                    </em>
+                <em>Ich habe die <a target="_blank" href="privacy" (click)="policyRead = true"> Datenschutzerklärung</a>
+                    gelesen und akzeptiert.
+                </em>
                 } @else {
-                    <em>I've read the <a target="_blank" href="privacy" (click)="policyRead = true"> privacy policy</a>
-                        and agree to the procession of my data as outlined.
-                    </em>
+                <em>I've read the <a target="_blank" (click)="router.navigate(['privacy'])"> privacy policy</a>
+                    and agree to the procession of my data as outlined.
+                </em>
                 }
-                <span [ngStyle]="{'opacity': !policyRead && check.checked ? 1 : 0}"> Please read privacy Policy first
+                <span [ngStyle]="{'opacity': !policyRead && check.checked ? 1 : 0}">
+                    @if ( VariableService.deutsch ) { Bitte lesen Sie zuerst die Datenschutzerklärung. }
+                    @else { Please read privacy Policy first. }
                 </span>
             </div>
+            @if ( VariableService.deutsch ) {
+            <p [ngStyle]="{'opacity': !check.checked && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+                Bitte stimme der Datenschutzerklärung zu</p>
+            }
+            @else {
             <p [ngStyle]="{'opacity': !check.checked && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                 Please agree to privacy policy</p>
+            }
         </div>
         <button></button>
 

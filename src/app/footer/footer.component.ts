@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,5 +13,6 @@ export class FooterComponent {
 
   emailString = "mailto: tech@gagandeepsingh.de"
 
+  constructor(public VariableService: VariableService) { }
 
 }

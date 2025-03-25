@@ -1,13 +1,61 @@
-
-
 <div>
+
+    @if ( VariableService.deutsch ) {
+        <h1> Impressum </h1>
+
+        <span>1. Allgemeine Informationen:</span>
+        Diese Website ist ein persönliches Portfolio, erstellt und gepflegt von Gagandeep Singh. 
+        Die Inhalte dienen ausschließlich Informationszwecken und spiegeln die persönlichen Arbeiten, 
+        Erfahrungen und Projekte des Eigentümers wider.
+    
+        <span>2. Kontaktinformationen:</span>
+        Gagandeep Singh
+        <br>Frühlingstraße 5A,
+        <a [href]="emailString">techat&commat;gagandeepsingh.de,</a>
+        01637052452
+    
+        <span>3. Geistiges Eigentum:</span>
+        Alle Inhalte dieser Website, einschließlich aber nicht beschränkt auf Texte, Bilder, 
+        Grafiken und Logos, sind – sofern nicht anders angegeben – geistiges Eigentum von 
+        Gagandeep Singh. Jegliche unbefugte Nutzung, Vervielfältigung oder Verbreitung ist ohne 
+        vorherige schriftliche Genehmigung untersagt.
+    
+        <span>4. Externe Links:</span>
+        Diese Website kann Links zu externen Webseiten enthalten. Gagandeep Singh übernimmt 
+        keine Verantwortung für deren Inhalte, Datenschutzrichtlinien oder sonstige Praktiken.
+
+        <span>5. Haftungsausschluss:</span>
+        Die Informationen auf dieser Website werden ohne Gewähr bereitgestellt. Es wird keine 
+        Garantie für Vollständigkeit, Richtigkeit oder Eignung übernommen. Der Eigentümer haftet 
+        nicht für Schäden, die aus der Nutzung dieser Website entstehen.
+    
+        <span>6. Datenschutz:</span>
+        Diese Website erhebt keine personenbezogenen Daten, es sei denn, diese werden ausdrücklich 
+        vom Nutzer bereitgestellt (Z.B. über ein Kontaktformular). Erhobene Daten werden nicht ohne 
+        Zustimmung an Dritte weitergegeben, außer es besteht eine gesetzliche Verpflichtung.
+    
+        <span>7. Änderungen:</span>
+        Der Eigentümer behält sich das Recht vor, dieses Impressum jederzeit ohne Vorankündigung zu 
+        ändern oder zu aktualisieren. Nutzer sollten diese Seite regelmäßig überprüfen.
+    
+        <span>8. Anwendbares Recht:</span>
+        Dieses Impressum unterliegt dem Recht der Bundesrepublik Deutschland. 
+        Gerichtsstand für alle Streitigkeiten im Zusammenhang mit dieser Website ist Deutschland.
+
+        Bei Fragen zum Impressum:
+        <a [href]="emailString">tech&commat;gagandeepsingh.de</a>
+    
+        <span>Letzte Aktualisierung: 28-02-2025</span>
+    
+    }
+    @else {
 
     <h1> Legal Notice </h1>
 
-    <span>1. General Information:</span> 
+    <span>1. General Information:</span>
     This website is a personal portfolio created and maintained by
-     Gagandeep Singh. The content presented on this site is for informational 
-     purposes only and reflects the personal work, experience, and projects of the owner.
+    Gagandeep Singh. The content presented on this site is for informational
+    purposes only and reflects the personal work, experience, and projects of the owner.
 
     <span>2. Contact Information:</span>
     Gagandeep Singh
@@ -15,37 +63,40 @@
     <a [href]="emailString">techat&commat;gagandeepsingh.de,</a>
     01637052452
 
-    <span>3. Intellectual Property:</span> 
-    All content, including but not limited to text, images, graphics, 
-    and logos, is the intellectual property of Gagandeep Singh unless otherwise stated. Unauthorized use, 
-    reproduction, or distribution of any material from this website is strictly prohibited without prior 
+    <span>3. Intellectual Property:</span>
+    All content, including but not limited to text, images, graphics,
+    and logos, is the intellectual property of Gagandeep Singh unless otherwise stated. Unauthorized use,
+    reproduction, or distribution of any material from this website is strictly prohibited without prior
     written permission from the owner.
 
-    <span>4. External Links:</span> 
+    <span>4. External Links:</span>
     This website may contain links to third-party websites. [Your Name] is not responsible for the
     content, privacy policies, or practices of any external sites linked from this portfolio.
 
-    <span>5. Liability Disclaimer:</span> 
+    <span>5. Liability Disclaimer:</span>
     The information on this website is provided "as is" without any guarantees of completeness,
-    accuracy, reliability, or suitability for any purpose. The owner shall not be held liable for 
+    accuracy, reliability, or suitability for any purpose. The owner shall not be held liable for
     any errors, omissions, or damages resulting from the use of this website.
 
-    <span>6. Privacy Policy:</span> 
+    <span>6. Privacy Policy:</span>
     This website does not collect personal data unless explicitly provided by the user (e.g., via a
     contact form). Any data collected will not be shared with third parties without consent, except
-     as required by law.
+    as required by law.
 
     <span>7. Modifications:</span>
     The owner reserves the right to modify or update this legal notice at any time without prior notice.
     Users are encouraged to review this page periodically.
 
-    <span>8. Governing Law:</span> 
+    <span>8. Governing Law:</span>
     This legal notice is governed by the laws of Germany. Any disputes
     arising in connection with this website shall be subject to the jurisdiction of the courts.
 
-    For any inquiries regarding this legal notice, 
+    For any inquiries regarding this legal notice,
     please contact <a [href]="emailString">tech&commat;gagandeepsingh.de</a>
 
     <span>Last updated: 28-02-2025</span>
+
+    }
+
 
 </div>

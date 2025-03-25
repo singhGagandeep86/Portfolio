@@ -4,6 +4,7 @@ import { AboutMeComponent } from '../about-me/about-me.component';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { state } from '@angular/animations';
+import { VariableService } from '../variable.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -40,6 +41,7 @@ export class HeroSectionComponent {
   @ViewChild('toggleIcon') toggleIcon?: ElementRef;
 
   constructor(private BreakpointObserver: BreakpointObserver,
+    public VariableService: VariableService,
     private destroyRef: DestroyRef) { }
 
 
