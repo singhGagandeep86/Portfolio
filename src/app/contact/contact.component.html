@@ -90,11 +90,11 @@
                     name="check" id="check" required>
                 <label for="check"><img src="./assets/Images/check.png"></label>
                 @if ( VariableService.deutsch) {
-                <em>Ich habe die <a target="_blank" href="privacy" (click)="policyRead = true"> Datenschutzerklärung</a>
+                <em>Ich habe die <a target="_blank" routerLink="/privacy" routerLinkActive="active" (click)="policyRead = true"> Datenschutzerklärung</a>
                     gelesen und akzeptiert.
                 </em>
                 } @else {
-                <em>I've read the <a target="_blank" (click)="router.navigate(['privacy'])"> privacy policy</a>
+                <em>I've read the <a target="_blank" routerLink="/privacy" routerLinkActive="active" (click)="policyRead = true"> privacy policy</a>
                     and agree to the procession of my data as outlined.
                 </em>
                 }
@@ -113,6 +113,15 @@
             }
         </div>
         <button></button>
+
+        <div class="success-message">
+            @if ( VariableService.deutsch ) {
+                Vielen Dank fur Ihre Nachricht
+            }
+            @else {
+                
+            }
+        </div>
 
         <a href="#hero" class="scroller alternate"></a>
 
