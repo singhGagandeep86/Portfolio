@@ -58,51 +58,19 @@ export class HeroSectionComponent {
   }
 
 
-  // tabClicked(event: Event) {
+  tabClicked( value: string) {
 
-  //   const clickedElement = event.target as HTMLElement;
+    if (value == 'german') {
+      this.VariableService.deutsch = true;
+      this.VariableService.english = false;
+    }
 
+    if (value == 'english') {
+      this.VariableService.deutsch = false;
+      this.VariableService.english = true;
+    }
 
-  //   if (clickedElement.id == 'aboutMe') {
-  //     this.aboutMeStatus = true;
-  //     this.mySkillsStatus = false;
-  //     this.projectsStatus = false;
-  //     this.contactStatus = false;
-  //   }
-
-  //   if (clickedElement.id == 'mySkills') {
-  //     this.aboutMeStatus = false;
-  //     this.mySkillsStatus = true;
-  //     this.projectsStatus = false;
-  //     this.contactStatus = false;
-  //   }
-
-  //   if (clickedElement.id == 'projects') {
-  //     this.aboutMeStatus = false;
-  //     this.mySkillsStatus = false;
-  //     this.projectsStatus = true;
-  //     this.contactStatus = false;
-  //   }
-
-  //   if (clickedElement.id == 'contact') {
-  //     this.aboutMeStatus = false;
-  //     this.mySkillsStatus = false;
-  //     this.projectsStatus = false;
-  //     this.contactStatus = true;
-  //   }
-
-  //   if (clickedElement.id == 'german') {
-  //     this.germanLangSelected = true;
-  //     this.englishLangSelected = false;
-  //   }
-
-  //   if (clickedElement.id == 'english') {
-  //     this.germanLangSelected = false;
-  //     this.englishLangSelected = true;
-  //   }
-
-
-  // }
+  }
 
   toggleMenu() {
 

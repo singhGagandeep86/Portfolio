@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -15,9 +15,12 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class ContactComponent {
 
+  @ViewChild('successMessage') successMessage?: ElementRef;
+
   constructor( private http: HttpClient,
     public VariableService: VariableService,
-    public router: Router
+    public router: Router,
+    private renderer: Renderer2
   ){}
 
   contactData = {
@@ -51,19 +54,28 @@ export class ContactComponent {
         .subscribe({
           next: (response: object) => {
             console.log(`test`, response);
-            
             ngForm.resetForm();
           },
           error: (error: string) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.contactDone(),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.log(this.contactData);
       
       ngForm.resetForm();
     }
+  }
+
+  contactDone(){
+    this.successMessage?.nativeElement.classList.add('show');
+    this.renderer.setStyle(document.body, 'overflow', 'hidden');
+  }
+
+  returnBack(){
+    this.successMessage?.nativeElement.classList.remove('show');
+    this.renderer.setStyle(document.body, 'overflow', 'scroll');
   }
 
 }

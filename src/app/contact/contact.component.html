@@ -86,22 +86,18 @@
 
         <div class="chk-btn">
             <div>
-                <input #check type="checkbox" (click)="policyRead && contactData.accepted = !contactData.accepted"
+                <input #check type="checkbox" (click)="contactData.accepted = true"
                     name="check" id="check" required>
                 <label for="check"><img src="./assets/Images/check.png"></label>
                 @if ( VariableService.deutsch) {
-                <em>Ich habe die <a target="_blank" routerLink="/privacy" routerLinkActive="active" (click)="policyRead = true"> Datenschutzerklärung</a>
+                <em>Ich habe die <a routerLink="/privacy" routerLinkActive="active"> Datenschutzerklärung</a>
                     gelesen und akzeptiert.
                 </em>
                 } @else {
-                <em>I've read the <a target="_blank" routerLink="/privacy" routerLinkActive="active" (click)="policyRead = true"> privacy policy</a>
+                <em>I've read the <a routerLink="/privacy" routerLinkActive="active"> privacy policy</a>
                     and agree to the procession of my data as outlined.
                 </em>
                 }
-                <span [ngStyle]="{'opacity': !policyRead && check.checked ? 1 : 0}">
-                    @if ( VariableService.deutsch ) { Bitte lesen Sie zuerst die Datenschutzerklärung. }
-                    @else { Please read privacy Policy first. }
-                </span>
             </div>
             @if ( VariableService.deutsch ) {
             <p [ngStyle]="{'opacity': !check.checked && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
@@ -114,13 +110,16 @@
         </div>
         <button></button>
 
-        <div class="success-message">
-            @if ( VariableService.deutsch ) {
-                Vielen Dank fur Ihre Nachricht
-            }
-            @else {
-                
-            }
+        <div #successMessage (click)="returnBack()" class="success-message">
+            <div>
+                @if ( VariableService.deutsch ) {
+                    Vielen Dank fur Ihre Nachricht & aufmerksamkeit !!
+                }
+                @else {
+                    Thanks for contacting me !!
+                }
+            </div>
+          
         </div>
 
         <a href="#hero" class="scroller alternate"></a>

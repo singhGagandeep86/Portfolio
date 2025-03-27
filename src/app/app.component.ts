@@ -13,10 +13,5 @@ import { FooterComponent } from './footer/footer.component';
 export class AppComponent {
 
   emailString = "mailto: tech@gagandeepsingh.de"
-
- 
- 
- 
-
  
 }

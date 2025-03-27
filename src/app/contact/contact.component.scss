@@ -28,7 +28,7 @@
     gap: 2.25em;
     margin: 0em;
 
-    >span{
+    >span {
         display: none;
     }
 }
@@ -250,11 +250,28 @@ button {
 .success-message {
 
     display: none;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+    background-color: #262E34;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+    >div {
+        width: 90%;
+        max-width: 22em;
+        border-radius: 32px;
+        font-family: 'josefin sans';
+        font-size: 3rem;
+        text-align: center;
+        line-height: 2em;
+        background-color: #F8F5EC;
+        color: black;
+    }
 
 }
 
@@ -419,7 +436,7 @@ button {
         flex-direction: column-reverse;
         margin-bottom: 3em;
 
-        >span{
+        >span {
             display: block;
             font-family: 'josefin sans' !important;
             font-size: 1.45rem !important;
@@ -476,9 +493,9 @@ button {
         }
     }
 
-    .chk-btn{
-        >div{
-            >span{
+    .chk-btn {
+        >div {
+            >span {
                 margin-top: 20%;
                 left: 4%;
             }

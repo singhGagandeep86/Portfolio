@@ -12,21 +12,21 @@
 
         <div #mobileNav class="mobile-nav">
             @if ( VariableService.deutsch ) {
-                <a href="#aboutMe" [ngClass]="aboutMeStatus ? 'clicked' : ''">Uber mich</a>
-                <a href="#mySkills" [ngClass]="mySkillsStatus ? 'clicked' : ''">Fähigkeitem</a>
-                <a href="#projects" [ngClass]="projectsStatus ? 'clicked' : ''">Projekt</a>
-                <a href="#contact" [ngClass]="contactStatus ? 'clicked' : ''">Kontakt</a>
+                <a href="#aboutMe" >Uber mich</a>
+                <a href="#mySkills" >Fähigkeitem</a>
+                <a href="#projects" >Projekt</a>
+                <a href="#contact"> Kontakt</a>
             }
             @else {
-                <a href="#aboutMe" [ngClass]="aboutMeStatus ? 'clicked' : ''">Why me</a>
-                <a href="#mySkills" [ngClass]="mySkillsStatus ? 'clicked' : ''">Skills</a>
-                <a href="#projects" [ngClass]="projectsStatus ? 'clicked' : ''">Projects</a>
-                <a href="#contact" [ngClass]="contactStatus ? 'clicked' : ''">Contact</a>
+                <a href="#aboutMe">Why me</a>
+                <a href="#mySkills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             }
         
             <div class="lang-box">
-                <a href="#" id="german" [ngClass]="germanLangSelected ? 'lang-selected' : ''">DE</a>
-                <a href="#" id="english" [ngClass]="englishLangSelected ? 'lang-selected' : ''">EN</a>
+                <a href="#" (click)="tabClicked('german')" [ngClass]="VariableService.deutsch ? 'lang-selected' : ''">DE</a>
+                <a href="#" (click)="tabClicked('english')" [ngClass]="VariableService.english ? 'lang-selected' : ''">EN</a>
             </div>
 
             <img src="./assets/Images/mobileNav.png">

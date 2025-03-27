@@ -18,47 +18,52 @@ export class NavBarComponent {
   projectsStatus: boolean = false;
   contactStatus: boolean = false;
 
+
+  resetValue() {
+    this.aboutMeStatus = false;
+    this.mySkillsStatus = false
+    this.projectsStatus = false;
+    this.contactStatus = false;
+
+  }
+
   @ViewChild('projectSection') projectSection?: ElementRef;
 
-  tabClicked(event: Event) {
-    const clickedElement = event.target as HTMLElement;
+  tabClicked(value: string) {
 
-    if (clickedElement.id == 'aboutMe') {
-      this.aboutMeStatus = true;
-      this.mySkillsStatus = false;
-      this.projectsStatus = false;
-      this.contactStatus = false;
-    }
+    switch (value) {
 
-    if (clickedElement.id == 'mySkills') {
-      this.aboutMeStatus = false;
-      this.mySkillsStatus = true;
-      this.projectsStatus = false;
-      this.contactStatus = false;
-    }
+      case 'aboutMe':
+        this.resetValue();
+        this.aboutMeStatus = true;
+        break;
 
-    if (clickedElement.id == 'projects') {
-      this.aboutMeStatus = false;
-      this.mySkillsStatus = false;
-      this.projectsStatus = true;
-      this.contactStatus = false;
-    }
+      case 'mySkills':
+        this.resetValue();
+        this.mySkillsStatus = true;
+        break;
 
-    if (clickedElement.id == 'contact') {
-      this.aboutMeStatus = false;
-      this.mySkillsStatus = false;
-      this.projectsStatus = false;
-      this.contactStatus = true;
-    }
+      case 'projects':
+        this.resetValue();
+        this.projectsStatus = true;
+        break;
 
-    if (clickedElement.id == 'german') {
-      this.VariableService.deutsch = true;
-      this.VariableService.english = false;
-    }
+      case 'contact':
+        this.resetValue();
+        this.contactStatus = true;
+        break;
 
-    if (clickedElement.id == 'english') {
-      this.VariableService.english = true;
-      this.VariableService.deutsch = false;
+      case 'german':
+
+        this.VariableService.deutsch = true;
+        this.VariableService.english = false;
+        break;
+
+      case 'english':
+        this.VariableService.english = true;
+        this.VariableService.deutsch = false;
+        break;
+
     }
 
   }
