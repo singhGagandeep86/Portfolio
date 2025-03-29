@@ -30,42 +30,26 @@ export class NavBarComponent {
   @ViewChild('projectSection') projectSection?: ElementRef;
 
   tabClicked(value: string) {
+    this.resetValue?.();
 
-    switch (value) {
-
-      case 'aboutMe':
-        this.resetValue();
-        this.aboutMeStatus = true;
-        break;
-
-      case 'mySkills':
-        this.resetValue();
-        this.mySkillsStatus = true;
-        break;
-
-      case 'projects':
-        this.resetValue();
-        this.projectsStatus = true;
-        break;
-
-      case 'contact':
-        this.resetValue();
-        this.contactStatus = true;
-        break;
-
-      case 'german':
-
+    const statusMap: { [key: string]: () => void } = {
+      aboutMe: () => this.aboutMeStatus = true,
+      mySkills: () => this.mySkillsStatus = true,
+      projects: () => this.projectsStatus = true,
+      contact: () => this.contactStatus = true,
+      german: () => {
         this.VariableService.deutsch = true;
         this.VariableService.english = false;
-        break;
-
-      case 'english':
+      },
+      english: () => {
         this.VariableService.english = true;
         this.VariableService.deutsch = false;
-        break;
-
-    }
-
+      }
+      
+    };
+  
+    statusMap[value]?.();
+    
   }
 
   constructor(public VariableService: VariableService) { }
