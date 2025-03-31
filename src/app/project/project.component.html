@@ -11,7 +11,8 @@
 
             @for (project of projects.projects; track $index) {
             <div (click)="selectProject($index, $event)" [ngClass]="clicked[$index] ? 'clicked' : ''">
-                {{ $index + 1 }}. <span> @if ( VariableService.deutsch ){ {{ project.nameGerman }} } @else { {{ project.name }} }</span>
+                {{ $index + 1 }}. <span> @if ( VariableService.deutsch ){ {{ project.nameGerman }} } @else { {{
+                    project.name }} }</span>
             </div>
             }
         </div>
@@ -37,12 +38,14 @@
                     @if ( VariableService.deutsch) { Mein Arbeitsprozess im Überblick }
                     @else { How I have organised my work process }
                 </h3>
-                <p>@if ( VariableService.deutsch){ {{ projects.projectLearnProcessGerman }} } @else { {{ projects.projectLearnProcess}} }</p>
+                <p>@if ( VariableService.deutsch){ {{ projects.projectLearnProcessGerman }} } @else { {{
+                    projects.projectLearnProcess}} }</p>
                 <h3><img src="./assets/Images/EllipseSmall.png">
-                   @if ( VariableService.deutsch) { {{ projects.projectHeadingGerman }} }
-                   @else { {{ projects.projectHeading}}}
+                    @if ( VariableService.deutsch) { {{ projects.projectHeadingGerman }} }
+                    @else { {{ projects.projectHeading}}}
                 </h3>
-                <p>@if ( VariableService.deutsch) { {{ projects.projectDetailsGerman }} } @else { {{ projects.projectDetails }} }</p>
+                <p>@if ( VariableService.deutsch) { {{ projects.projectDetailsGerman }} } @else { {{
+                    projects.projectDetails }} }</p>
                 }
             </div>
             <div class="project-optics">
@@ -62,10 +65,13 @@
 
                 <img id="projScreen" #projScreen src="{{ projects.projectImage }}">
 
+                @if ( projects.projectLink) {
                 <div class="project-links" #projectLinks>
                     <a href="{{ projects.projectLink }}" target="_blank">Live Test</a>
                     <a href="{{ projects.projectGithub }}" target="_blank">GitHub</a>
                 </div>
+                }
+
             </div>
 
             <div class="mobile-version">
@@ -74,7 +80,8 @@
                 </span>
                 <p> @if ( VariableService.deutsch ){ Technologien: } @else { Technologies: } {{
                     projects.projectTechnologies }}</p>
-                <p> @if ( VariableService.deutsch ){ Dauer: {{ projects.projectDuration }} Wochen } @else { Duration: {{ projects.projectDuration }} Weeks }</p>
+                <p> @if ( VariableService.deutsch ){ Dauer: {{ projects.projectDuration }} Wochen } @else { Duration: {{
+                    projects.projectDuration }} Weeks }</p>
             </div>
         </div>
 

@@ -7,6 +7,6 @@ export class VariableService {
 
   constructor() { }
 
-  deutsch: boolean = true;
-  english: boolean = false;
+  deutsch: boolean = false;
+  english: boolean = true;
 }

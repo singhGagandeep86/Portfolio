@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-privacy',
   standalone: true,
   templateUrl: './privacy.component.html',
-  styleUrl: './privacy.component.scss'
+  styleUrl: './privacy.component.scss',
+  imports: []
 })
 export class PrivacyComponent {
 
