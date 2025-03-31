@@ -68,7 +68,14 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 1.125em;
+
+        >span {
+            width: 1.2em;
+            height: 1.3em;
+            background-position: center;
+        }
 
         &:hover {
             cursor: pointer;
@@ -77,21 +84,26 @@
         }
     }
 
-    :nth-child(1) {
+    >div:nth-child(1) {
+        >span {
+            background-image: url("../../assets/Images/iconEmail.png");
+        }
 
         &:hover {
-            img {
-                content: url("../../assets/Images/iconEmailHvr.png");
+            >span {
+                background-image: url("../../assets/Images/iconEmailHvr.png");
             }
-
         }
     }
 
-    :nth-child(2) {
+    >div:nth-child(2) {
+        >span {
+            background-image: url("../../assets/Images/iconphone.png");
+        }
 
         &:hover {
-            img {
-                content: url("../../assets/Images/iconPhoneHvr.png");
+            >span {
+                background-image: url("../../assets/Images/iconphoneHvr.png");
             }
         }
     }
@@ -361,8 +373,8 @@ button {
         width: 90%;
     }
 
-    .success-message{
-        >div{
+    .success-message {
+        >div {
             width: 98%;
             font-size: 2rem;
         }
@@ -525,8 +537,8 @@ button {
         }
     }
 
-    .success-message{
-        >div{
+    .success-message {
+        >div {
             width: 98%;
             font-size: 1.4rem;
         }
