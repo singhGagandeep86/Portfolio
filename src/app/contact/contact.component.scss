@@ -202,6 +202,7 @@ form {
         >label {
             margin-right: 0.3em;
             cursor: pointer;
+            content: url("../../assets/Images/check.png");
 
             &:hover {
                 content: url("../../assets/Images/checkHover.png");

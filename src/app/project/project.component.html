@@ -18,10 +18,13 @@
         </div>
         <div class="project-detail">
 
-            <div class="project-links-mobile" #projectLinks>
-                <a href="{{ projects.projectLink }}" target="_blank">Live Test</a>
-                <a href="{{ projects.projectGithub }}" target="_blank">GitHub</a>
-            </div>
+            @if ( projects.projectLink) {
+                <div class="project-links-mobile" #projectLinks>
+                    <a href="{{ projects.projectLink }}" target="_blank">Live Test</a>
+                    <a href="{{ projects.projectGithub }}" target="_blank">GitHub</a>
+                </div>
+            }
+        
 
             <div class="description">
                 <h3><img src="./assets/Images/EllipseSmall.png">
