@@ -35,7 +35,6 @@ export class ContactComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  mailTest = false;
   policyRead = false;
 
   post = {
@@ -50,23 +49,18 @@ export class ContactComponent {
   };
 
   toSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.contactData.accepted == true) {
+    if (ngForm.submitted && ngForm.form.valid && this.contactData.accepted == true) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
-          next: (response: object) => {
-            console.log(`test`, response);
+          next: () => {
+            this.contactDone();
             ngForm.resetForm();
           },
           error: (error: string) => {
             console.error(error);
-          },
-          complete: () => this.contactDone(),
+          }
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(this.contactData);
-
-      ngForm.resetForm();
-    }
+    } 
   }
 
   contactDone() {
