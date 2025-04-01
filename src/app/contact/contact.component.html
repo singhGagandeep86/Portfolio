@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <form (ngSubmit)="toSubmit(contactForm)" #contactForm="ngForm">
+    <form #form="ngForm" (ngSubmit)="toSubmit(contactForm)" #contactForm="ngForm">
         <div class="input-container">
             <div>
                 @if ( VariableService.deutsch) {

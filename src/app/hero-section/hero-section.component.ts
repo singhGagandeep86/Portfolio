@@ -91,6 +91,7 @@ export class HeroSectionComponent {
   }
 
   hideMobileNav() {
+    this.mobileNavBar = false;
     this.picPart?.nativeElement.classList.remove('hide');
     this.mobileNav?.nativeElement.classList.remove('show');
     this.toggleIcon?.nativeElement.classList.remove('toggle-icon-clicked');

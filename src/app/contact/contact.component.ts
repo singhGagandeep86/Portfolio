@@ -16,12 +16,13 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 export class ContactComponent {
 
   @ViewChild('successMessage') successMessage?: ElementRef;
+  @ViewChild('check') check?: ElementRef;
 
-  constructor( private http: HttpClient,
+  constructor(private http: HttpClient,
     public VariableService: VariableService,
     public router: Router,
     private renderer: Renderer2
-  ){}
+  ) { }
 
   contactData = {
     name: "",
@@ -63,19 +64,27 @@ export class ContactComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.log(this.contactData);
-      
+
       ngForm.resetForm();
     }
   }
 
-  contactDone(){
+  contactDone() {
     this.successMessage?.nativeElement.classList.add('show');
     this.renderer.setStyle(document.body, 'overflow', 'hidden');
+    this.check!.nativeElement.checked = false;
+    setTimeout(() => {
+      this.returnBack();
+    }, 2000);
+    setTimeout(() => {
+      this.scrollUp();
+    }, 2000);
   }
 
-  returnBack(){
+  returnBack() {
     this.successMessage?.nativeElement.classList.remove('show');
     this.renderer.setStyle(document.body, 'overflow', 'scroll');
+    this.contactData.accepted = false;
   }
 
 }

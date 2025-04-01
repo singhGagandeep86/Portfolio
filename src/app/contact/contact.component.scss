@@ -310,6 +310,12 @@ button {
 
     .cntct-detail {
         font-size: 1rem;
+
+        >div{
+            >span{
+                background-size: cover;
+            }
+        }
     }
 }
 
