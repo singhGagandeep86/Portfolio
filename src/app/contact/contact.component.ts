@@ -36,6 +36,9 @@ export class ContactComponent {
   }
 
   policyRead = false;
+  mailKeyEnter = false;
+  nameKeyEnter = false;
+  messageKeyEnter = false;
 
   post = {
     endPoint: 'https://gagandeepsingh.de/sendMail.php',
@@ -48,7 +51,13 @@ export class ContactComponent {
     },
   };
 
+
+  detectKeyboard(event: Event, value: string){
+    (this as any)[value + 'KeyEnter'] = true;
+  }
+
   toSubmit(ngForm: NgForm) {
+
     if (ngForm.submitted && ngForm.form.valid && this.contactData.accepted == true) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({

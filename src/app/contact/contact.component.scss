@@ -244,19 +244,19 @@ form {
 }
 
 button {
-    background: url("../../assets/Images/sendBtn.png");
+    background: url("../../assets/Images/sendBtnClicked.png");
     background-repeat: no-repeat;
     width: 115px !important;
     height: 53px;
     border: none;
     margin-left: auto;
     margin-bottom: 56px;
+    cursor: pointer;
 
-    &:hover {
-        cursor: pointer;
-        background: url("../../assets/Images/sendBtnClicked.png");
+    &:disabled{
+        background: url("../../assets/Images/sendBtn.png");
         background-repeat: no-repeat;
-        transition: 0.35s;
+        cursor: not-allowed;
     }
 }
 

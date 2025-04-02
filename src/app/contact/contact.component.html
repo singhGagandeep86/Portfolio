@@ -39,47 +39,47 @@
         <div class="input-container">
             <div>
                 @if ( VariableService.deutsch) {
-                <p>Name </p><input #name="ngModel" [(ngModel)]="contactData.name" name="first" type="text"
+                <p>Name </p><input #name="ngModel" (input)="detectKeyboard($event, 'name')" [(ngModel)]="contactData.name" name="first" type="text"
                     placeholder="Ihr Name" required>
-                <p [ngStyle]="{'opacity': !name.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+                <p [ngStyle]="{'opacity': (!name.valid && mailKeyEnter) || (!name.valid && messageKeyEnter) || (!name.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                     Bitte geben Sie Ihren Namen ein </p>
                 }
                 @else {
-                <p>Your name </p><input #name="ngModel" [(ngModel)]="contactData.name" name="first" type="text"
+                <p>Your name </p><input #name="ngModel" (input)="detectKeyboard($event, 'name')" [(ngModel)]="contactData.name" name="first" type="text"
                     placeholder="Your name" required>
-                <p [ngStyle]="{'opacity': !name.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+                <p [ngStyle]="{'opacity': (!name.valid && mailKeyEnter) || (!name.valid && messageKeyEnter) || (!name.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                     Please enter your Name </p>
                 }
             </div>
             <div>
 
                 @if ( VariableService.deutsch) {
-                <p>Email </p><input #mail="ngModel" [(ngModel)]="contactData.eMail" name="email" type="email"
+                <p>Email </p><input #mail="ngModel" (input)="detectKeyboard($event, 'mail')" [(ngModel)]="contactData.eMail" name="email" type="email"
                     placeholder="Ihre Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <p [ngStyle]="{'opacity': !mail.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    Gültige E-Mail-Adresse erforderlich.</p>
+                <p [ngStyle]="{'opacity': (!mail.valid && mailKeyEnter) || (!mail.valid && nameKeyEnter) || (!mail.valid && messageKeyEnter) || (!mail.valid && check.checked) 
+                ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}"> Gültige E-Mail-Adresse erforderlich.</p>
                 }
                 @else {
-                <p>Your Email </p><input #mail="ngModel" [(ngModel)]="contactData.eMail" name="email" type="email"
+                <p>Your Email </p><input #mail="ngModel" (input)="detectKeyboard($event, 'mail')" [(ngModel)]="contactData.eMail" name="email" type="email"
                     placeholder="Your Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <p [ngStyle]="{'opacity': !mail.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    Please enter your valid Email </p>
+                <p [ngStyle]="{'opacity': (!mail.valid && mailKeyEnter) || (!mail.valid && nameKeyEnter) || (!mail.valid && messageKeyEnter) || (!mail.valid && check.checked) 
+                ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}"> Please enter your valid Email </p>
                 }
             </div>
         </div>
 
         <div class="message-container">
             @if ( VariableService.deutsch) {
-            <p>Ihre Nachricht </p><textarea #message="ngModel" [(ngModel)]="contactData.message" name="message"
+            <p>Ihre Nachricht </p><textarea #message="ngModel" (input)="detectKeyboard($event, 'message')" [(ngModel)]="contactData.message" name="message"
                 placeholder="Ihre Nachricht" type="text" rows="6" required></textarea>
-            <p [ngStyle]="{'opacity': !message.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+            <p [ngStyle]="{'opacity': (!message.valid && mailKeyEnter) || (!message.valid && nameKeyEnter) || (!message.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                 Bitte geben Sie Ihre Nachricht ein </p>
             }
 
             @else {
-            <p>Your message </p><textarea #message="ngModel" [(ngModel)]="contactData.message" name="message"
+            <p>Your message </p><textarea #message="ngModel" (input)="detectKeyboard($event, 'message')" [(ngModel)]="contactData.message" name="message"
                 placeholder="Your message" type="text" rows="6" required></textarea>
-            <p [ngStyle]="{'opacity': !message.valid && contactForm.submitted ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
+            <p [ngStyle]="{'opacity': (!message.valid && mailKeyEnter) || (!message.valid && nameKeyEnter) || (!message.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
                 Please enter your message </p>
             }
         </div>
@@ -108,7 +108,7 @@
                 Please agree to privacy policy</p>
             }
         </div>
-        <button></button>
+        <button [disabled]="!contactForm.valid"></button>
 
         <div #successMessage (click)="returnBack()" class="success-message">
             <div>
