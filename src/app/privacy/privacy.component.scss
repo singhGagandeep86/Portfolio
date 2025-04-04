@@ -1,7 +1,4 @@
-
-
-
-div {
+.main-container {
     height: calc(100vh - 11.2em);
     width: 78%;
     font-family: 'Josefin Sans';
@@ -14,7 +11,7 @@ div {
     text-align: center;
     line-height: 1.5em;
 
-    >a{
+    >a {
         text-decoration: none;
     }
 
@@ -24,6 +21,26 @@ div {
     }
 }
 
-div::-webkit-scrollbar {
+.main-container::-webkit-scrollbar {
     display: none;
+}
+
+
+app-nav-bar{
+    display: block;
+}
+
+.nav-bar{
+    display: block !important;
+}
+
+.brackets {
+    position: absolute;
+    margin-left: 4px;
+    margin-top: 3px;
+}
+
+.toggle-icon{
+    cursor: pointer;
+    content: url("../../assets/Images/menuBtn.png");
 }
