@@ -10,30 +10,21 @@ body {
   width: 100%;
 }
 
-app-main {
+app-main,
+app-about-me,
+app-project,
+app-about-me {
   background-color: #262e34;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-app-nav-bar {
+  justify-content: center;
   width: 100%;
 }
 
-app-references{
-  width: 100%;
-}
-
-app-root {
-  width: 100%;
-}
-
-app-about-me {
-  width: 100%;
-}
-
-app-project {
+app-nav-bar,
+app-root,
+app-references {
   width: 100%;
 }
 
@@ -139,6 +130,7 @@ app-privacy {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: calc(100vh - 104px);
 }
 
 .alternate-container {
@@ -152,7 +144,6 @@ app-privacy {
   overflow-x: hidden;
   text-align: center;
   line-height: 1.5em;
-  margin-top: 3em;
 
   >a {
     text-decoration: none;
@@ -242,6 +233,10 @@ app-privacy {
 }
 
 @media (max-width: 752px) {
+
+  .alternate-container {
+    margin-top: 3em;
+  }
 
   .scroller {
     margin-top: 2em;
