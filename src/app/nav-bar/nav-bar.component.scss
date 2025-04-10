@@ -7,7 +7,6 @@
     height: 104px;
     gap: 7%;
     background-color: #89BCD9;
-    width: 100vw;
     scroll-behavior: smooth;
     z-index: 100;
 
@@ -81,9 +80,9 @@
     }
 }
 
- @media (max-width: 752px) {
+@media (max-width: 752px) {
 
     .nav-bar {
         display: none;
     }
- }
+}

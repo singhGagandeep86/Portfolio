@@ -1,9 +1,7 @@
-import { ViewportScroller, CommonModule } from '@angular/common';
-import { Component, Input, ElementRef, ViewChild, NgModule, DestroyRef } from '@angular/core';
-import { AboutMeComponent } from '../about-me/about-me.component';
+import { CommonModule } from '@angular/common';
+import { Component, ElementRef, ViewChild, DestroyRef } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { state } from '@angular/animations';
 import { VariableService } from '../variable.service';
 
 @Component({

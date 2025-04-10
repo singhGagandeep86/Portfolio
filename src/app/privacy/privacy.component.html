@@ -1,17 +1,29 @@
-
 <app-nav-bar></app-nav-bar>
 
-<div class="overlay">
-  <div class="self-logo">
-      <img src="./assets/Images/LogoIcon.png">
-      <img class="brackets" src="./assets/Images/Bracket.png">
-      <span>G.Singh</span>
-      <p>developer</p>
+<div class="overlay mo-overlay">
+  <div #mobileNav class="mobile-navigator">
+    @if ( VariableService.deutsch ) {
+    <a href="#aboutMe" (click)="hideMobileNav()">Uber mich</a>
+    <a href="#mySkills" (click)="hideMobileNav()">Fähigkeitem</a>
+    <a href="#projects" (click)="hideMobileNav()">Projekt</a>
+    <a href="#contact" (click)="hideMobileNav()">Kontakt</a>
+    }
+    @else {
+    <a href="#aboutMe" (click)="hideMobileNav()">Why me</a>
+    <a href="#mySkills" (click)="hideMobileNav()">Skills</a>
+    <a href="#projects" (click)="hideMobileNav()">Projects</a>
+    <a href="#contact" (click)="hideMobileNav()">Contact</a>
+    }
+
+    <div class="lang-box">
+      <a href="#" (click)="tabClicked('german')" [ngClass]="VariableService.deutsch ? 'lang-selected' : ''">DE</a>
+      <a href="#" (click)="tabClicked('english')" [ngClass]="VariableService.english ? 'lang-selected' : ''">EN</a>
+    </div>
   </div>
   <img #toggleIcon class="toggle-icon" (click)="toggleMenu()">
 </div>
 
-<div class="main-container">
+<div class="alternate-container">
 
   @if ( VariableService.deutsch ) {
 

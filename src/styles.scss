@@ -5,14 +5,36 @@ body {
   align-items: center;
   box-sizing: border-box;
   background-color: #000000;
-  max-width: 1440px;
   color: #ffffff;
   scroll-behavior: smooth;
+  width: 100%;
+}
+
+app-main {
+  background-color: #262e34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+app-nav-bar {
+  width: 100%;
+}
+
+app-references{
+  width: 100%;
 }
 
 app-root {
   width: 100%;
-  background-color: #262e34;
+}
+
+app-about-me {
+  width: 100%;
+}
+
+app-project {
+  width: 100%;
 }
 
 * {
@@ -25,12 +47,13 @@ h1 {
   color: #89BCD9;
 }
 
-.hide{
-  display: none!important;
+.hide {
+  display: none !important;
 }
 
-.show{
-  display: flex!important;
+.show {
+  display: flex !important;
+  opacity: 1 !important;
 }
 
 .scroller {
@@ -111,12 +134,73 @@ h1 {
   }
 }
 
-app-legal-notice, app-privacy {
+app-legal-notice,
+app-privacy {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.alternate-container {
+  width: 78%;
+  font-family: 'Josefin Sans';
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: center;
+  line-height: 1.5em;
+  margin-top: 3em;
+
+  >a {
+    text-decoration: none;
+  }
+
+  >span {
+    color: #89BCD9;
+    margin: 0.8em;
+  }
+}
+
+.alternate-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mo-overlay {
+  position: absolute;
+  top: 2em;
+  justify-content: center !important;
+  gap: 1% !important;
+}
+
+.mobile-navigator {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #89BCD9;
+  opacity: 0;
+  width: 88%;
+  border-radius: 1em;
+  height: 8em;
+  gap: 6%;
+  padding: 1em;
+
+  >a {
+    font-family: 'josefin sans';
+    color: #262E34;
+    text-decoration: none;
+    font-size: 26px;
+
+    &:hover {
+      cursor: pointer;
+      color: #ffffff;
+    }
+  }
+}
 
 /* anta-regular - latin */
 @font-face {

@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: center;
     height: calc(100vh - 104px);
-    width: 100%;
+    max-width: 1920px;
 
     >div {
         display: flex;
@@ -51,7 +51,7 @@
     background-repeat: no-repeat;
     transition: .65s ease;
     background-size: contain;
-    width: 49%;
+    width: 45%;
     height: auto;
     max-height: 41em;
 
@@ -70,7 +70,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 49%;
+    width: 54%;
 
     >div {
         display: flex;
@@ -208,7 +208,6 @@
     }
 
     .mobile-nav {
-        width: 26em;
         height: 22em;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -256,8 +255,6 @@
         justify-content: center;
 
         >img{
-            // width: 100%;
-            // width: 76%;
             width: 18em;
             height: 20em;
         }
