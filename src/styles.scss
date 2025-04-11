@@ -19,13 +19,14 @@ app-main, app-about-me, app-project, app-about-me {
   width: 100%;
 }
 
-app-nav-bar, app-root, app-references {
+app-nav-bar, app-root, app-references, app-hero-section {
   width: 100%;
 }
 
 app-nav-bar{
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 * {
@@ -45,6 +46,10 @@ h1 {
 .show {
   display: flex !important;
   opacity: 1 !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
 }
 
 .scroller {
@@ -67,6 +72,7 @@ h1 {
   margin-top: 0px !important;
   font-size: 16px;
   text-align: center;
+  cursor: pointer;
 
   >:nth-child(1) {
     &:hover {
@@ -130,7 +136,6 @@ app-privacy {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100vh - 104px);
 }
 
 .alternate-container {

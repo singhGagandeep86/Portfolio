@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild, DestroyRef } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { Component, ElementRef, ViewChild, DestroyRef, Inject, Renderer2 } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { VariableService } from '../variable.service';
@@ -37,10 +37,13 @@ export class HeroSectionComponent {
   @ViewChild('picPart') picPart?: ElementRef;
   @ViewChild('mobileNav') mobileNav?: ElementRef;
   @ViewChild('toggleIcon') toggleIcon?: ElementRef;
+  @ViewChild('mainBody') mainBody?: ElementRef;
 
   constructor(private BreakpointObserver: BreakpointObserver,
     public VariableService: VariableService,
-    private destroyRef: DestroyRef) { }
+    private destroyRef: DestroyRef,
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2) { }
 
 
   ngOnInit() {
@@ -56,7 +59,7 @@ export class HeroSectionComponent {
   }
 
 
-  tabClicked( value: string) {
+  tabClicked(value: string) {
 
     if (value == 'german') {
       this.VariableService.deutsch = true;
@@ -86,6 +89,7 @@ export class HeroSectionComponent {
     this.picPart?.nativeElement.classList.add('hide');
     this.mobileNav?.nativeElement.classList.add('show');
     this.toggleIcon?.nativeElement.classList.add('toggle-icon-clicked');
+    this.renderer.addClass(this.document.body, 'no-scroll');
   }
 
   hideMobileNav() {
@@ -93,6 +97,7 @@ export class HeroSectionComponent {
     this.picPart?.nativeElement.classList.remove('hide');
     this.mobileNav?.nativeElement.classList.remove('show');
     this.toggleIcon?.nativeElement.classList.remove('toggle-icon-clicked');
+    this.renderer.removeClass(this.document.body, 'no-scroll');
   }
 
 }

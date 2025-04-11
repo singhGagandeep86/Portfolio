@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild, DestroyRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VariableService } from '../variable.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -40,10 +42,12 @@ export class NavBarComponent {
       german: () => {
         this.VariableService.deutsch = true;
         this.VariableService.english = false;
+        localStorage.setItem('language', 'deutsch');
       },
       english: () => {
         this.VariableService.english = true;
         this.VariableService.deutsch = false;
+        localStorage.setItem('language', 'english');
       }
       
     };
@@ -52,6 +56,9 @@ export class NavBarComponent {
     
   }
 
-  constructor(public VariableService: VariableService) { }
+  constructor(public VariableService: VariableService,
+    private router: Router
+  ) { }
+
 
 }
