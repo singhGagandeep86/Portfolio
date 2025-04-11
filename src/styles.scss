@@ -10,10 +10,7 @@ body {
   width: 100%;
 }
 
-app-main,
-app-about-me,
-app-project,
-app-about-me {
+app-main, app-about-me, app-project, app-about-me {
   background-color: #262e34;
   display: flex;
   flex-direction: column;
@@ -22,10 +19,13 @@ app-about-me {
   width: 100%;
 }
 
-app-nav-bar,
-app-root,
-app-references {
+app-nav-bar, app-root, app-references {
   width: 100%;
+}
+
+app-nav-bar{
+  position: sticky;
+  top: 0;
 }
 
 * {
@@ -236,7 +236,7 @@ app-privacy {
 
   .alternate-container {
     margin-top: 3em;
-  }
+    }
 
   .scroller {
     margin-top: 2em;
