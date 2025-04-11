@@ -1,9 +1,11 @@
 <div #navBar class="nav-bar">
-    <div class="self-logo" style="width: 52px !important;">
-        <img src="./assets/Images/LogoIconDark.png">
-        <span>G.Singh</span>
-        <sub>developer</sub>
-    </div>
+    <a href="#" (click)="tabClicked('hero')">
+        <div class="self-logo" style="width: 52px !important;">
+            <img src="./assets/Images/LogoIconDark.png">
+            <span>G.Singh</span>
+            <sub>developer</sub>
+        </div>
+    </a>
 
     <a href="#aboutMe" (click)="tabClicked('aboutMe')" [ngClass]="aboutMeStatus ? 'clicked' : ''">@if
         (VariableService.deutsch) {Über mich}@else { Why me}</a>
@@ -16,7 +18,8 @@
 
     <div class="lang-box">
         <a id="german" (click)="tabClicked('german')" [ngClass]="VariableService.deutsch ? 'lang-selected' : ''">DE</a>
-        <a id="english" (click)="tabClicked('english')" [ngClass]="VariableService.english ? 'lang-selected' : ''">EN</a>
+        <a id="english" (click)="tabClicked('english')"
+            [ngClass]="VariableService.english ? 'lang-selected' : ''">EN</a>
     </div>
 
 </div>

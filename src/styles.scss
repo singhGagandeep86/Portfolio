@@ -29,6 +29,10 @@ app-nav-bar{
   z-index: 1000;
 }
 
+.scroll-pos {
+  scroll-margin-top: 3.8em;
+}
+
 * {
   scroll-behavior: smooth;
 }
