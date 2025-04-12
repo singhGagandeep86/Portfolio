@@ -54,6 +54,8 @@ export class ContactComponent {
 
   detectKeyboard(event: Event, value: string){
     (this as any)[value + 'KeyEnter'] = true;
+    console.log((this as any)[value + 'KeyEnter']);
+    
   }
 
   toSubmit(ngForm: NgForm) {
