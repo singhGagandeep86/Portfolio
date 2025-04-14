@@ -1,9 +1,10 @@
 .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1920px;
     height: 104px;
-    gap: 7%;
     background-color: #89BCD9;
     scroll-behavior: smooth;
 
@@ -63,18 +64,10 @@
 @media (max-width: 920px) {
 
     .nav-bar {
-        gap: 6%;
-
+       
         >a {
             font-size: 24px;
         }
-    }
-}
-
-@media (max-width: 830px) {
-
-    .nav-bar {
-        gap: 4%;
     }
 }
 

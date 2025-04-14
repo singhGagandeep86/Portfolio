@@ -10,7 +10,7 @@ body {
   width: 100%;
 }
 
-app-main, app-about-me, app-project, app-about-me {
+app-main, app-root, app-about-me, app-project, app-about-me, app-hero-section, app-my-skill, app-references, app-contact {
   background-color: #262e34;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,16 @@ app-main, app-about-me, app-project, app-about-me {
   width: 100%;
 }
 
-app-nav-bar, app-root, app-references, app-hero-section {
+app-nav-bar, app-footer {
+  width: 100%;
+  background-color: #89BCD9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+app-root {
   width: 100%;
 }
 
@@ -135,14 +144,15 @@ h1 {
   }
 }
 
-app-legal-notice,
-app-privacy {
+app-legal-notice, app-privacy {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .alternate-container {
+  max-width: 1920px;
   width: 78%;
   font-family: 'Josefin Sans';
   font-size: 18px;
@@ -250,6 +260,11 @@ app-privacy {
   .scroller {
     margin-top: 2em;
   }
+
+.scroll-pos {
+  scroll-margin-top: 0;
+}
+
 }
 
 @media (max-width: 378px) {

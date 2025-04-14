@@ -17,7 +17,8 @@
             font-family: 'Anta';
             font-size: 3.375rem;
             color: #89BCD9;
-            margin: 0em 3em;
+            margin: 0em 2.4em;
+            text-align: center;
         }
     }
 }
@@ -78,7 +79,6 @@
         }
 
         &:hover {
-            cursor: pointer;
             color: #89BCD9;
             transition: 0.35s;
         }
@@ -128,12 +128,12 @@ form {
 .input-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     color: #89BCD9;
 
     >div {
-        width: 47.2%;
+        width: 49%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -145,8 +145,8 @@ form {
         }
 
         >input {
-            width: 82%;
-            padding: 1.2em 2em;
+            width: 94%;
+            padding: 1.2em 0em 1.2em 1em;
             border: 1px solid #89BCD9;
             background: #89BCD91F;
             color: #ffffff;
@@ -168,6 +168,10 @@ form {
     align-items: flex-start;
     gap: 0.8em;
     color: #89BCD9;
+
+    >p {
+        line-height: 0;
+    }
 
     :nth-child(2) {
         height: 60px;
@@ -204,7 +208,7 @@ form {
         white-space: nowrap;
 
         >input {
-            opacity: 0;
+            display: none;
 
             &:checked+label {
                 content: url("../../assets/Images/checked.png");
@@ -246,14 +250,14 @@ form {
 button {
     background: url("../../assets/Images/sendBtnClicked.png");
     background-repeat: no-repeat;
-    width: 115px !important;
+    width: 7.6em !important;
     height: 53px;
     border: none;
     margin-left: auto;
     margin-bottom: 56px;
     cursor: pointer;
 
-    &:disabled{
+    &:disabled {
         background: url("../../assets/Images/sendBtn.png");
         background-repeat: no-repeat;
         cursor: not-allowed;
@@ -311,8 +315,8 @@ button {
     .cntct-detail {
         font-size: 1rem;
 
-        >div{
-            >span{
+        >div {
+            >span {
                 background-size: cover;
             }
         }
@@ -375,10 +379,6 @@ button {
         }
     }
 
-    form {
-        width: 90%;
-    }
-
     .success-message {
         >div {
             width: 98%;
@@ -401,6 +401,7 @@ button {
     }
 
     form {
+        width: 80%;
         gap: 3em;
     }
 
@@ -413,16 +414,20 @@ button {
             width: 100%;
             align-items: center;
 
+            >input {
+                width: 100%;
+
+                &::placeholder {
+                    opacity: 1;
+                }
+            }
+
             >p:nth-child(1) {
                 display: none;
             }
 
             >p:nth-child(3) {
                 margin-right: auto;
-            }
-
-            >input {
-                width: 88%;
             }
         }
     }
@@ -434,6 +439,12 @@ button {
             display: none;
         }
 
+        :nth-child(2) {
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+
         >p:nth-child(3) {
             margin-right: auto;
         }
@@ -442,6 +453,10 @@ button {
 }
 
 @media (max-width: 632px) {
+
+    form {
+        width: 92%;
+    }
 
     .chk-btn {
         >div {
@@ -499,32 +514,13 @@ button {
         }
     }
 
-    .input-container {
-        >div {
-            width: 96%;
-
-            >input {
-                width: 84%;
-
-                &::placeholder {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
-    .message-container {
-
-        :nth-child(2) {
-            &::placeholder {
-                opacity: 1;
-            }
-        }
-    }
-
     form {
+
+        width: 88%;
+
         >a {
             display: block;
+            width: 90%;
             position: relative;
             bottom: 82px;
             width: 2.37em;

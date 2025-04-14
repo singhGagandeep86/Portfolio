@@ -14,7 +14,6 @@ import { VariableService } from '../variable.service';
 
 export class HeroSectionComponent {
   scrollDown() {
-
     window.scrollTo({ top: 896, behavior: 'smooth' });
   }
 
