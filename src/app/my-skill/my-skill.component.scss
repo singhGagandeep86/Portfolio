@@ -15,8 +15,8 @@ div {
 .skill-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    width: 80%;
     min-height: 24.75em;
     gap: 4.93em;
 
@@ -34,14 +34,14 @@ div {
     flex-direction: row;
     gap: 49px;
     flex-wrap: wrap;
-    width: 25.56em;
+    width: 50%;
 }
 
 .upgrading {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: auto;
+    width: 28%;
     text-align: center;
     font-family: 'josefin sans';
     font-size: 18px;
@@ -94,6 +94,45 @@ div {
 
 }
 
+@media (max-width: 1432px) {
+    .upgrading {
+
+        >img {
+            margin-left: 0;
+            width: 26%;
+        }
+    }
+}
+
+@media (max-width: 1362px) {
+    .skill-icons {
+        justify-content: flex-start;
+    }
+
+}
+
+@media (max-width: 1180px) {
+
+    .skill-container {
+        width: 90%;
+    }
+
+    .skill-icons {
+        justify-content: flex-start;
+        gap: 58px;
+    }
+
+}
+
+@media (max-width: 1080px) {
+
+    .upgrading {
+        >img {
+            width: 28%;
+        }
+    }
+}
+
 @media (max-width: 1040px) {
     .skill-icons {
         gap: 2.9em;
@@ -115,14 +154,6 @@ div {
 
     .upgrading {
         font-size: 1rem;
-
-        >img {
-            width: 25em;
-
-            &:hover {
-                width: 20em;
-            }
-        }
     }
 }
 
@@ -138,19 +169,11 @@ div {
     }
 
     .skill-container {
-        gap: 3.85em;
+        width: 80%;
     }
 
     .upgrading {
         font-size: 0.92rem;
-
-        >img {
-            width: 23em;
-
-            &:hover {
-                width: 20em;
-            }
-        }
     }
 
 }
