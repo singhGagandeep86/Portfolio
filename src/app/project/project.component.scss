@@ -43,9 +43,14 @@ div {
     padding: 34px 25px;
 }
 
-.project-detail {
+.content-container{
     min-height: 38em;
     background-color: #89BCD912;
+    width: 100%;
+}
+
+.project-detail {
+    max-width: 1750px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -57,7 +62,7 @@ div {
     align-items: flex-start;
     color: #F8F5EC;
     width: 55%;
-    padding: 2em 4em 2em 8em;
+    padding: 2em 12em 2em 0em;
 
     >h3 {
         font-family: 'josefin sans';
@@ -86,7 +91,7 @@ div {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    padding: 0em 8em 0em 3em;
+    padding: 0em 0em 0em 11em;
 
     :nth-child(1) {
         display: flex;
@@ -238,9 +243,30 @@ div {
     }
 }
 
+@media (max-width: 1880px) {
+
+    .description {
+        padding: 2em 6em 2em 6em;
+    }
+
+    .project-optics {
+        padding: 0em 4em 0em 0em;
+    }
+
+}
+
+@media (max-width: 1780px) {
+
+    .description {
+        padding: 2em 2em 2em 10em;
+    }
+
+}
+
+
 @media (max-width: 1396px) {
     .description {
-        padding: 2em 3em;
+        padding: 2em 0em 2em 10em;
     }
 
     .project-optics {
@@ -250,11 +276,11 @@ div {
 
 @media (max-width: 1256px) {
     .description {
-        padding: 2em 3em;
+        padding: 2em 0em 2em 6em;
     }
 
     .project-optics {
-        padding: 2em 2.5em;
+        padding: 2em 4em 2em 0em;
     }
 }
 
@@ -306,6 +332,14 @@ div {
     }
 }
 
+@media (max-width: 1180px) {
+
+    .description {
+        padding: 2em 0em 2em 4em;
+    }
+
+}
+
 @media (max-width: 1026px) {
     .project-nav {
         gap: 1.6em;
@@ -313,8 +347,7 @@ div {
     }
 
     .description {
-        padding: 2em;
-
+       
         >h3 {
             >p {
                 font-size: 0.88rem;
@@ -329,10 +362,8 @@ div {
 
 @media (max-width: 995px) {
 
-    .description,
-    .project-optics {
-        padding: 1.5em;
-
+    .description {
+        padding: 2em 0em 2em 3em;
         >h3 {
 
             font-size: 1.25rem;
@@ -344,17 +375,19 @@ div {
     }
 }
 
+@media (max-width: 928px) {
+
+    .description {
+        padding: 2em 0em 2em 6em;
+    }
+
+}
+
 @media (max-width: 865px) {
 
-    .description,
-    .project-optics {
-        padding: 1em;
-
+    .description {
         >h3 {
-
-            font-size: 1.10rem;
-
-          
+            font-size: 1.10rem;  
         }
 
     }
