@@ -42,13 +42,13 @@
                 <p>Name </p><input #name="ngModel" (focus)="detectKeyboard($event, 'name')" [(ngModel)]="contactData.name" name="first" type="text"
                     placeholder="Ihr Name" required minlength="2">
                 <p [ngStyle]="{'opacity': (!name.valid && nameKeyEnter) || (!name.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    Bitte geben Sie Ihren Namen ein (min. 2 Zeichen) </p>
+                    Name eingeben (min. 2 Zeichen) </p>
                 }
                 @else {
                 <p>Your name </p><input #name="ngModel" (focus)="detectKeyboard($event, 'name')" [(ngModel)]="contactData.name" name="first" type="text"
                     placeholder="Your name" required minlength="2">
                 <p [ngStyle]="{'opacity': (!name.valid && mailKeyEnter) || (!name.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                    Please enter your Name (min. 2 Characters) </p>
+                    Enter name (min. 2 chars) </p>
                 }
             </div>
             <div>
@@ -73,14 +73,14 @@
             <p>Ihre Nachricht </p><textarea #message="ngModel" (focus)="detectKeyboard($event, 'message')" [(ngModel)]="contactData.message" name="message"
                 placeholder="Ihre Nachricht" required minlength="4" type="text" rows="6" required></textarea>
             <p [ngStyle]="{'opacity': (!message.valid && messageKeyEnter) || (!message.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                Bitte geben Sie Ihre Nachricht ein (min. 4 Zeichen) </p>
+                Nachricht eingeben (mind. 4 Zeichen) </p>
             }
 
             @else {
             <p>Your message </p><textarea #message="ngModel" (focus)="detectKeyboard($event, 'message')" [(ngModel)]="contactData.message" name="message"
                 placeholder="Your message" required minlength="4" type="text" rows="6" required></textarea>
             <p [ngStyle]="{'opacity': (!message.valid && messageKeyEnter) || (!message.valid && check.checked) ? 1 : 0 , 'color': 'rgb(255, 0 , 0)'}">
-                Please enter your message (min. 4 Characters) </p>
+                Enter your message (min. 4 chars) </p>
             }
         </div>
 

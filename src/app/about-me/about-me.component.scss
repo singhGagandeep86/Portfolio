@@ -76,7 +76,7 @@ div {
     justify-content: space-between;
     max-width: 40%;
     width: auto;
-    height: 250px;
+    height: 255px;
 
     >p {
         font-family: 'josefin sans';
@@ -96,6 +96,7 @@ div {
     font-size: 1.125rem;
     text-align: center;
     border-radius: 1.87em;
+    padding: 0.2em 0em;
 
     &:hover {
         cursor: pointer;
