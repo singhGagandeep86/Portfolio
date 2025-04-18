@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30%;
+    gap: 35%;
 }
 
 .left-part {
@@ -78,28 +78,39 @@
     }
 }
 
+@media (max-width: 1645px) {
+    .main-container {
+        gap: 32%;
+    }
+}
+
 @media (max-width: 1120px) {
+    .main-container {
+        gap: 30%;
+    }
+}
+
+@media (max-width: 986px) {
+    .main-container {
+        gap: 28%;
+    }
+}
+
+@media (max-width: 925px) {
     .main-container {
         gap: 26%;
     }
 }
 
-@media (max-width: 923px) {
+@media (max-width: 848px) {
     .main-container {
         gap: 24%;
     }
 }
 
-@media (max-width: 848px) {
-    .main-container {
-        gap: 22%;
-    }
-
-}
-
 @media (max-width: 762px) {
     .main-container {
-        gap: 20%;
+        gap: 22%;
     }
 }
 

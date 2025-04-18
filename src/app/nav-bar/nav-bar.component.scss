@@ -1,7 +1,8 @@
 .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 12%;
     width: 100%;
     max-width: 1920px;
     height: 104px;
@@ -61,10 +62,39 @@
     color: #ffffff !important;
 }
 
+@media (max-width: 1650px) {
+
+    .nav-bar {
+    gap: 10%;
+    }
+}
+
+@media (max-width: 1390px) {
+
+    .nav-bar {
+    gap: 9.6%;
+    }
+}
+
+@media (max-width: 1120px) {
+
+    .nav-bar {
+    gap: 8.4%;
+    }
+}
+
+@media (max-width: 1060px) {
+
+    .nav-bar {
+    gap: 7.2%;
+    }
+}
+
 @media (max-width: 920px) {
 
     .nav-bar {
-       
+       gap: 6%;
+
         >a {
             font-size: 24px;
         }
