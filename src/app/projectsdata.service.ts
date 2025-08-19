@@ -47,23 +47,23 @@ export class ProjectsdataService {
       github: "https://github.com/singhGagandeep86/El-Pollo-Loco"
     },
     {
-      name: "Ongoing Project",
-      nameGerman: "Aktuelles Projekt",
+      name: "DABubble",
+      nameGerman: "DABubble",
       duration: 6,
-      description: "DA Bubble will be a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
-      descriptionGerman: "DA Bubble wird eine Slack-Clone-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit durch eine intuitive Benutzeroberfläche, Echtzeitnachrichten und eine starke Kanalorganisation.",
-      learnProcess: "",
-      learnProcessGerman: "",
+      description: "DaBubble is a modern chat app for teams, similar to Slack. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization. Irrespective of whether on a computer or a smartphone.",
+      descriptionGerman: "DaBubble ist eine moderne Chat-App für Teams, ähnlich wie Slack. Die Anwendung hat ein intuitives Design, damit sich Nutzer schnell zurechtfinden. Man kann in Echtzeit schreiben, zwischen Kanälen wechseln und direkt mit Kollegen chatten, auf Desktop wie mobil.",
+      learnProcess: "In the project, I developed the dashboard together with one team member, implementing the search function. Additionally, I independently created the thread messaging system and implemented the responsive design of the dashboard for different screen sizes.",
+      learnProcessGerman: "In dem Projekt habe ich zusammen mit einem Teammitglied das Dashboard entwickelt und dabei die Suchfunktion umgesetzt. Außerdem habe ich alleine das Thread-Messaging realisiert und das responsive Design des Dashboard selbstständig für verschiedene Bildschirmgrößen umgesetzt.",
       experience: {
-        heading: "",
-        headingGerman: "",
-        details: "",
-        detailsGerman: ""
+        heading: "Teamwork & Challenges",
+        headingGerman: "Teamarbeit & Herausforderungen",
+        details: "We built the project as a team of three using Angular, Firebase, TypeScript, and SCSS. The app includes many small features, which made the development more complex. One key challenge was working on the dashboard at the same time without code conflicts. We also planned and implemented the Firestore data structure (e.g. for messages and threads) together.",
+        detailsGerman: "Wir haben das Projekt im Dreierteam mit Angular, Firebase, TypeScript und SCSS umgesetzt. Die App enthält viele kleine Funktionen, was die Umsetzung anspruchsvoller gemacht hat. Eine besondere Herausforderung war das gleichzeitige Arbeiten am Dashboard ohne Codekonflikte. Auch die Struktur der Daten in Firestore (z.B. für Nachrichten und Threads) haben wir gemeinsam geplant und umgesetzt."
       },
-      image: "./assets/Images/comingProject.png",
+      image: "./assets/Images/DABubble.png",
       technologies: ['Angular', 'TypeScript', 'Firebase'],
-      link: "",
-      github: ""
+      link: "https://da-bubble.gagandeepsingh.de/index.html",
+      github: "https://github.com/singhGagandeep86/DA-Bubble"
     }
   ]
 
