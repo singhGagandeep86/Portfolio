@@ -12,20 +12,20 @@ export class ProjectsdataService {
       name: "Join",
       nameGerman: "Join",
       duration: 8,
-      description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      descriptionGerman: "Task-Manager inspiriert vom Kanban-System. Aufgaben erstellen und organisieren mit Drag-and-Drop-Funktion, Nutzern und Kategorien zuweisen.",
-      learnProcess: "I was responsible for the “Add Task” area and the Firebase integration. The code was structured into modular, well-named components. I organized my work using Kanban and regular standups. This kept the code maintainable, clean, and easy to extend.",
-      learnProcessGerman: "Ich war für den „Add Task“-Bereich und die Firebase-Anbindung zuständig. Den Code habe ich in modulare, gut benannte Komponenten strukturiert. Mit Kanban und regelmäßigen Standups habe ich meine Arbeit organisiert. So blieb der Code wartbar, übersichtlich und leicht erweiterbar.",
+      description: "Task manager inspired by the Kanban System. Manage tasks, users, and categories, with a secure drag & drop image upload feature.",
+      descriptionGerman: "Aufgabenmanager, inspiriert vom Kanban-System. Verwalte Aufgaben, Benutzer und Kategorien mit einer sicheren Drag-&-Drop-Bild-Upload-Funktion.",
+      learnProcess: "I was responsible for the “Add Task” area and the Firebase integration during the team project. I structured the code into clean, modular components and organized my work using Kanban. Afterwards, I independently developed the image upload with drag & drop functionality and improved the overall performance and usability.",
+      learnProcessGerman: "Ich war für den Bereich „Aufgabe hinzufügen“ und die Firebase-Integration verantwortlich. Dabei habe ich den Code in klare, modulare Komponenten gegliedert und meine Arbeit mit Kanban organisiert. Anschließend entwickelte ich eigenständig die Drag-&-Drop-Bild-Upload-Funktion und verbesserte die Struktur und Benutzerfreundlichkeit des Projekts.",
       experience: {
         heading: "My group work experience",
         headingGerman: "Meine Erfahrungen mit Gruppenarbeit",
-        details: "Our team consisted of 3 people, and my role was to create add Task section and work on firebase to save and edit all data. We worked closely together, ensuring great teamwork and smooth cooperation, which made the project both efficient and enjoyable.",
-        detailsGerman: "In unserem 3-köpfigen Team war ich für den „Add Task“-Bereich und die Firebase-Anbindung zum Speichern und Bearbeiten der Daten verantwortlich. Die enge Zusammenarbeit sorgte für effizientes und angenehmes Arbeiten."
+        details: "Our team had three members. I was responsible for the “Add Task” section and Firebase integration. We worked closely together, ensuring smooth collaboration. Afterwards, I independently developed the drag & drop image upload and improved the project’s performance and usability.",
+        detailsGerman: "Unser Team bestand aus drei Personen. Ich war für „Aufgabe hinzufügen“ und Firebase verantwortlich. Wir arbeiteten eng zusammen. Danach entwickelte ich die Drag-&-Drop-Bild-Upload-Funktion und verbesserte Leistung und Benutzerfreundlichkeit."
       },
       image: "./assets/Images/join.png",
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: "https://join-334.developerakademie.net/join/index.html",
-      github: "https://github.com/Rusty-Alex/join"
+      link: "https://join.gagandeepsingh.de/index.html",
+      github: "https://github.com/singhGagandeep86/JoinPlus"
     },
     {
       name: "El-Pollo-Loco",

@@ -4,6 +4,7 @@ div {
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 1920px;
     margin-top: 56px;
     gap: 56px;
 
@@ -21,34 +22,27 @@ div {
 .ref-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 6em;
+    justify-content: flex-start;
+    width: 96%;
+    max-width: 1750px;
+    gap: 2em;
     margin: 0px;
     font-family: 'josefin sans';
     color: #F8F5EC;
+    overflow-x: auto;
+    overflow-y: hidden;
 
-
-    >div {
+    >.each-comment {
         Width: 378px;
         Height: 383px;
         margin: 0px;
         font-size: 1.125rem;
         gap: 1.2em;
-
-        >img {
-            position: absolute;
-            content: url("../../assets/Images/referanceShape.png");
-            margin-left: 2.6em;
-
-            &:hover {
-                content: url("../../assets/Images/referanceShapeHover.png");
-                height: 20em;
-                width: 20em;
-                margin: 0;
-            }
-
-        }
+        background: url("../../assets/Images/referanceShape.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0 18px;
 
         >h4 {
             margin: 0px;
@@ -70,7 +64,19 @@ div {
                 color: #89BCD9;
             }
         }
+
+        &:hover {
+            background: url("../../assets/Images/referanceShapeHover.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0 18px;
+        }
     }
+}
+
+.ref-container::-webkit-scrollbar {
+    display: none;
 }
 
 @media (max-width: 965px) {
@@ -143,9 +149,9 @@ div {
 
 }
 
-@media (max-width: 788px){
+@media (max-width: 788px) {
 
-    .ref-container{
+    .ref-container {
         gap: 0;
     }
 
